@@ -9,16 +9,28 @@
 body{background:#061023;color:white;min-height:100vh}
 .top{text-align:center;padding:14px 0 6px 0}
 .top img{width:140px;border-radius:12px}
-.tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;white-space:nowrap}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;white-space:nowrap;scrollbar-width:none}
 .tab{border:none;padding:10px 16px;border-radius:22px;font-weight:700;background:rgba(255,255,255,0.12);color:white;cursor:pointer;flex-shrink:0}
 .tab.ativo{background:#FFC91F;color:#0a1931}
 .sec{display:none;padding:12px 12px 40px 12px}
 .sec.ativo{display:block}
 .mascote{width:100%;border-radius:20px;display:block;background:#0a1931}
 .frases{text-align:center;font-weight:800;margin:16px 0 12px 0;font-size:19px;line-height:1.3}
-.btn{background:#FFC91F;color:#0a1931;border:none;padding:12px 28px;border-radius:28px;font-weight:800;font-size:15px;cursor:pointer}
+.btn{background:#FFC91F;color:#0a1931;border:none;padding:12px 28px;border-radius:28px;font-weight:800;font-size:15px;cursor:pointer;margin:4px}
+.btn-outline{background:transparent;color:#FFC91F;border:2px solid #FFC91F}
+.btn-grande{width:95%;padding:16px;font-size:17px;margin-top:8px}
 .center{text-align:center;margin-bottom:18px}
 .card{background:white;color:#0a1931;border-radius:20px;padding:18px;margin-top:12px;line-height:1.55}
+.banner-escola{width:100%;border-radius:20px;display:block;margin-bottom:12px;background:#0a1931}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}
+.stat{background:#0a1931;border:2px solid #FFC91F;border-radius:16px;padding:14px 6px;text-align:center}
+.stat b{color:#FFC91F;font-size:20px;display:block}
+.stat span{font-size:12px;color:#fff}
+.brinqs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.brinq{background:white;border-radius:16px;padding:10px;text-align:center;color:#0a1931}
+.brinq img{width:100%;border-radius:12px;margin-bottom:8px}
+.brinq b{display:block;background:#FFC91F;border-radius:20px;padding:8px;font-size:12px;margin-top:6px}
+.titulo-amarelo{text-align:center;color:#FFC91F;font-weight:800;margin:18px 0 10px 0;font-size:18px}
 </style>
 </head>
 <body>
@@ -33,17 +45,21 @@ body{background:#061023;color:white;min-height:100vh}
 <button id="b-identidade" class="tab" onclick="A('identidade')">Identidade</button>
 <button id="b-patrocinio" class="tab" onclick="A('patrocinio')">Patrocínio</button>
 <button id="b-loja" class="tab" onclick="A('loja')">Loja</button>
+<button id="b-escolas" class="tab" onclick="A('escolas')">Escolas</button>
 </div>
 
+<!-- CONCEITO LIMPO -->
 <div id="conceito" class="sec ativo">
 <img class="mascote" src="conceito.jpg" alt="Mascote Napymi">
 <div class="frases">Mergulhando em ideias,<br>emergindo soluções</div>
-<div class="center"><button class="btn" onclick="A('estrutura')">Conheça o Projeto</button></div>
+<div class="center">
+<button class="btn" onclick="A('estrutura')">Conheça o Projeto</button>
+<button class="btn btn-outline" onclick="A('escolas')">NAPYMI nas Escolas</button>
+</div>
 <div class="card">
 <h3>CONCEITO</h3>
-<p><b>ROV • Submarine Robotics Team — UFRJ</b><br>Universidade Federal do Rio de Janeiro<br>📍 Ilha do Fundão, Rio de Janeiro</p><br>
-<p>Somos a equipe de robótica submarina da UFRJ, dedicada a projetar, construir e programar ROVs de alta performance para competições nacionais e internacionais.</p><br>
-<p>Unimos engenharia, inovação e paixão pelo oceano.</p><br>
+<p><b>ROV • Submarine Robotics Team — UFRJ</b><br>Ilha do Fundão, Rio de Janeiro</p><br>
+<p>Somos a equipe de robótica submarina da UFRJ, dedicada a projetar, construir e programar ROVs de alta performance para competições.</p><br>
 <p><b>Mergulhando em ideias, emergindo soluções! 🌊🤖</b></p>
 </div>
 </div>
@@ -51,31 +67,51 @@ body{background:#061023;color:white;min-height:100vh}
 <div id="estrutura" class="sec">
 <div class="card">
 <h3>ESTRUTURA</h3>
-<p>🔧 Mecânica: Estrutura e propulsão</p>
-<p>⚡ Elétrica: Sistemas eletrônicos</p>
-<p>💻 Programação: Controle e visão</p>
-<p>📢 Marketing: Redes e patrocínios</p>
+<p>🔧 <b>Mecânica:</b> Estrutura e propulsão<br>⚡ <b>Elétrica:</b> Sistemas eletrônicos<br>💻 <b>Programação:</b> Controle e visão<br>📢 <b>Marketing:</b> Redes e patrocínios</p>
 </div>
 </div>
 
 <div id="identidade" class="sec">
-<div class="card">
-<h3>IDENTIDADE</h3>
-<p>Mascote ÑAPYMI: criatividade e espírito de equipe.<br>Cores: azul oceano e amarelo energia.</p>
-</div>
+<div class="card"><h3>IDENTIDADE</h3><p>Mascote ÑAPYMI representa criatividade e espírito de equipe.<br>Cores: Azul oceano e Amarelo energia.</p></div>
 </div>
 
 <div id="patrocinio" class="sec">
-<div class="card">
-<h3>PATROCÍNIO</h3>
-<p>Apoie nosso projeto! contato@napymi.ufrj.br</p>
-</div>
+<div class="card"><h3>PATROCÍNIO</h3><p>Apoie nosso projeto e leve educação para escolas públicas!<br><br>📧 contato@napymi.ufrj.br</p></div>
 </div>
 
 <div id="loja" class="sec">
-<div class="card">
-<h3>LOJA</h3>
-<p>Em breve: camisetas e kits educativos!</p>
+<div class="card"><h3>LOJA</h3><p>Em breve: camisetas, kits educativos e adesivos!</p></div>
+</div>
+
+<!-- ABA ESCOLAS COMPLETA COM BOTÃO -->
+<div id="escolas" class="sec">
+<img class="banner-escola" src="escolas.jpg" alt="NAPYMI nas Escolas" onerror="this.style.display='none'">
+
+<div class="card" style="margin-top:0">
+<h3 style="text-align:center">Nas Escolas</h3>
+<div class="stats">
+<div class="stat"><b>100+</b><span>alunos</span></div>
+<div class="stat"><b>5+</b><span>escolas</span></div>
+<div class="stat"><b>10+</b><span>voluntários</span></div>
+</div>
+<p>🤖 Palestras de Robótica<br>🌊 Oficinas Vida Marinha<br>📦 Brinquedos Educativos</p>
+</div>
+
+<div class="titulo-amarelo">NOSSOS BRINQUEDOS</div>
+
+<div class="brinqs">
+<div class="brinq">
+<img src="quebra.jpg" alt="Quebra-cabeça" onerror="this.style.display='none'">
+<b>Quebra-cabeça 60 peças</b>
+</div>
+<div class="brinq">
+<img src="memoria.jpg" alt="Memória" onerror="this.style.display='none'">
+<b>Memória 32 Cartas</b>
+</div>
+</div>
+
+<div class="center" style="margin-top:20px">
+<button class="btn btn-grande" onclick="A('patrocinio')">Quer patrocinar essa ação? 💛</button>
 </div>
 </div>
 
@@ -88,5 +124,6 @@ document.getElementById('b-'+id).classList.add('ativo');
 window.scrollTo(0,0);
 }
 </script>
+
 </body>
 </html>
