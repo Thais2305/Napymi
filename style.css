@@ -8,3 +8,6 @@ body{background:#071A32;font-family:Arial}
 .pagina{display:none;max-width:520px;margin:0 auto}
 .pagina.ativa{display:block}
 .pagina img{width:100%}
+.conteudo{ display:none; }
+.conteudo.ativo{ display:block; }
+.aba, button{ cursor:pointer; }
