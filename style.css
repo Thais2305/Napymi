@@ -1,32 +1,24 @@
-* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
-
-body { background:#f5f7ff; color:#111; }
-
-header { background:#001a4d; color:white; padding:20px; text-align:center; }
-header h1 { letter-spacing:4px; margin-bottom:15px; }
-
-nav { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
-.aba { 
-  cursor:pointer; 
-  padding:8px 12px; 
-  border:2px solid white; 
-  background:white; 
-  color:#001a4d; 
-  border-radius:6px; 
-  font-weight:bold;
-}
-.aba:hover{ background:#ffcc00; }
-
-main { max-width:900px; margin:20px auto; padding:20px; background:white; border-radius:12px; }
-
-.conteudo { display:none; }
+body { margin:0; font-family: Arial, sans-serif; background:#f0f4f8; color:#0a1931; }
+header { text-align:center; background:#0a1931; padding:15px; position:sticky; top:0; z-index:10; }
+.logo { max-width:180px; margin-bottom:12px; }
+nav { display:flex; gap:6px; justify-content:center; flex-wrap:wrap; }
+.aba { background:#ffcc00; color:#0a1931; border:none; padding:8px 14px; border-radius:20px; font-weight:bold; cursor:pointer; }
+.aba:hover { background:white; }
+main { max-width:800px; margin:0 auto; padding:15px; }
+.conteudo { display:none; background:white; padding:20px; border-radius:12px; margin-top:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
 .conteudo.ativo { display:block; }
-
-.conteudo h2 { margin-bottom:10px; color:#001a4d; }
-.conteudo p { margin-bottom:20px; line-height:1.5; }
-
-.produtos { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
-.card { border:1px solid #ddd; padding:15px; border-radius:10px; text-align:center; width:200px; background:white; }
-.card button { cursor:pointer; margin-top:8px; padding:6px 12px; background:black; color:white; border:none; border-radius:6px; }
-
-#checkout input { border:1px solid #aaa; border-radius:6px; }
+.img-full { width:100%; border-radius:12px; margin-top:15px; max-width:600px; display:block; margin-left:auto; margin-right:auto; }
+.banner-conceito { background:#0a1931; color:white; padding:20px; border-radius:12px; text-align:center; }
+.btn-amarelo { background:#ffcc00; border:none; padding:12px 22px; border-radius:8px; font-weight:bold; cursor:pointer; margin-top:10px; }
+.produtos { display:flex; gap:15px; flex-wrap:wrap; justify-content:center; }
+.card { background:#fff; border:1px solid #ddd; border-radius:12px; padding:15px; text-align:center; width:220px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+.card img { border-radius:8px; }
+.preco { font-weight:bold; color:#0a1931; font-size:18px; }
+.card button { background:#0a1931; color:white; border:none; padding:10px; width:100%; border-radius:8px; cursor:pointer; margin-top:8px; }
+.stats { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:15px 0; }
+.stat { background:#0a1931; color:#ffcc00; padding:15px; border-radius:10px; text-align:center; min-width:90px; font-weight:bold; }
+.aviso-processo { background:#ffcc00; color:#0a1931; padding:15px; border-radius:10px; text-align:center; font-weight:bold; margin-top:20px; }
+#checkout { margin-top:30px; padding:15px; border:1px solid #ccc; border-radius:12px; background:#f9f9f9; }
+#checkout input { width:100%; padding:10px; margin:6px 0; border-radius:6px; border:1px solid #aaa; box-sizing:border-box; }
+.btn-cinza { width:100%; padding:10px; border-radius:6px; border:1px solid #aaa; cursor:pointer; }
+.btn-preto { width:100%; padding:12px; background:black; color:white; border-radius:8px; margin-top:10px; cursor:pointer; font-weight:bold; }
