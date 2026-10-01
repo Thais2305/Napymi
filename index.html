@@ -1,69 +1,126 @@
-let carrinho = [];
-let freteValor = 0;
 
-function mostrarAba(id) {
-  document.querySelectorAll('.conteudo').forEach(el => el.classList.remove('ativo'));
-  document.getElementById(id).classList.add('ativo');
-  window.scrollTo(0,0);
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAPYMI - ROV Submarine Team UFRJ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-function comprar(nome, preco) {
-  carrinho.push({nome, preco});
-  atualizarCarrinho();
-  mostrarAba('loja');
-  document.getElementById('checkout').scrollIntoView({behavior:'smooth'});
-}
+<header>
+  <img src="logo.jpg" alt="NAPYMI" class="logo">
+  <nav>
+    <button class="aba" onclick="mostrarAba('conceito')">Conceito</button>
+    <button class="aba" onclick="mostrarAba('identidade')">Identidade</button>
+    <button class="aba" onclick="mostrarAba('patrocinio')">Patrocínio</button>
+    <button class="aba" onclick="mostrarAba('estrutura')">Estrutura</button>
+    <button class="aba" onclick="mostrarAba('escolas')">ÑAPYMI nas Escolas</button>
+    <button class="aba" onclick="mostrarAba('loja')">Loja</button>
+  </nav>
+</header>
 
-function atualizarCarrinho() {
-  if(carrinho.length === 0){
-    document.getElementById('produto-escolhido').innerHTML = "<b>Carrinho vazio</b>";
-    document.getElementById('total').innerText = "";
-    return;
-  }
-  let lista = carrinho.map((item, index) => `${index+1}. ${item.nome} <button onclick="remover(${index})" style="color:red; border:none; background:none; cursor:pointer;">[x]</button>`).join('<br>');
-  let subtotal = carrinho.reduce((soma, item) => soma + item.preco, 0);
-  
-  document.getElementById('produto-escolhido').innerHTML = lista + `<br><br><b>Subtotal: R$ ${subtotal.toFixed(2).replace('.',',')}</b>`;
-  
-  if(freteValor > 0){
-    document.getElementById('total').innerHTML = `<b>Total com frete: R$ ${(subtotal + freteValor).toFixed(2).replace('.',',')}</b>`;
-  } else {
-    document.getElementById('total').innerHTML = `Subtotal: R$ ${subtotal.toFixed(2).replace('.',',')} + frete`;
-  }
-}
+<main>
+  <section id="conceito" class="conteudo ativo">
+    <div class="banner-conceito">
+      <h1>🚤 NAPYMI</h1>
+      <h2>Mergulhando em ideias, emergindo soluções</h2>
+      <p>ROV • Submarine Robotics Team — UFRJ • Ilha do Fundão</p>
+      <button class="btn-amarelo" onclick="mostrarAba('escolas')">Conheça nosso Projeto Social</button>
+    </div>
+    <h2>CONCEITO</h2>
+    <p>Somos a equipe de robótica submarina da UFRJ, dedicada a projetar e construir ROVs de alta performance para competições como SAUC-E, OBR e RoboSub.</p>
+    <img src="rov.jpg" class="img-full" alt="ROV NAPYMI">
+  </section>
 
-function remover(index) {
-  carrinho.splice(index, 1);
-  atualizarCarrinho();
-}
+  <section id="identidade" class="conteudo">
+    <h2>Identidade Visual</h2>
+    <p>Paleta oficial: Azul Marinho #0a1931 e Amarelo #ffcc00. Mascote caranguejo azul com boné NAPYMI.</p>
+    <img src="iden.jpg" class="img-full" alt="Identidade">
+  </section>
 
-async function calcularFrete() {
-  const cep = document.getElementById('cep').value.replace(/\D/g,'');
-  if(cep.length !== 8){ alert('Digite um CEP válido'); return; }
-  try {
-    const resp = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-    const dados = await resp.json();
-    if(dados.erro){ document.getElementById('endereco').innerText = 'CEP não encontrado'; return; }
-    document.getElementById('endereco').innerText = `${dados.logradouro}, ${dados.bairro} - ${dados.localidade}/${dados.uf}`;
-    freteValor = 19.90;
-    document.getElementById('frete').innerText = `Frete: R$ ${freteValor.toFixed(2).replace('.',',')}`;
-    atualizarCarrinho();
-  } catch(e){
-    document.getElementById('endereco').innerText = 'Erro ao buscar CEP';
-  }
-}
+  <section id="patrocinio" class="conteudo">
+    <h2>Patrocínio</h2>
+    <p>Seja parceiro da NAPYMI! Apoie inovação e educação.</p>
+    <img src="patrocinio.jpg" class="img-full" alt="Patrocínio">
+    <button class="btn-amarelo" onclick="mostrarAba('loja')">Veja Nossa Loja</button>
+  </section>
 
-function finalizarCompra() {
-  const nome = document.getElementById('nome').value;
-  if(carrinho.length === 0){ alert('Adicione pelo menos 1 produto!'); return; }
-  if(!nome){ alert('Digite seu nome!'); return; }
-  if(freteValor===0){ alert('Calcule o frete!'); return; }
-  
-  let subtotal = carrinho.reduce((s,n)=>s+n.preco,0);
-  let total = subtotal + freteValor;
-  let listaProdutos = carrinho.map(i => `- ${i.nome}`).join('\n');
-  let endereco = document.getElementById('endereco').innerText;
-  
-  const msg = `Olá NAPYMI! Quero comprar:\n${listaProdutos}\n\nNome: ${nome}\nEndereço: ${endereco}\nTotal com frete: R$ ${total.toFixed(2)}`;
-  window.open(`https://wa.me/5521999999999?text=${encodeURIComponent(msg)}`, '_blank');
-}
+  <section id="estrutura" class="conteudo">
+    <h2>Estrutura - Nossa Equipe</h2>
+    <p>Somos <b>10 voluntários</b> divididos em 5 áreas estratégicas, impactando <b>100 alunos</b> em <b>5 escolas públicas</b>.</p>
+    <img src="estrutura.jpg" class="img-full" alt="Equipe">
+    <div class="aviso-processo">
+      🚀 Em breve vamos abrir um processo seletivo para novos membros! Fique ligado no nosso Instagram @napymi.ufrj
+    </div>
+  </section>
+
+  <section id="escolas" class="conteudo">
+    <h2>ÑAPYMI nas Escolas - Projeto Social</h2>
+    <p><b>Educação e Sustentabilidade Marinha</b> - Levamos robótica e preservação do oceano para crianças de escolas públicas.</p>
+    
+    <div class="stats">
+      <div class="stat"><b>100</b><br>alunos impactados</div>
+      <div class="stat"><b>5</b><br>escolas públicas</div>
+      <div class="stat"><b>10</b><br>voluntários</div>
+    </div>
+
+    <h3>CONHEÇA NOSSOS BRINQUEDOS EDUCATIVOS</h3>
+    <p>Desenvolvidos pela equipe para levar o fundo do mar para a sala de aula!</p>
+
+    <div class="produtos">
+      <div class="card" style="border:2px solid #ffcc00;">
+        <img src="quebra-cabeca.jpg" alt="Quebra-cabeça 60 peças">
+        <h3>QUEBRA-CABEÇA 60 PEÇAS</h3>
+        <p><b>Desafio divertido para a mente!</b><br>• Peças grandes e resistentes<br>• Ilustração do ecossistema marinho<br>• 28x20cm montado</p>
+        <span class="tag-azul">DIVERSÃO EDUCATIVA</span>
+      </div>
+      <div class="card" style="border:2px solid #ffcc00;">
+        <img src="jogo-memoria.jpg" alt="Jogo da Memória 32 cartas">
+        <h3>JOGO DA MEMÓRIA 32 CARTAS</h3>
+        <p><b>Combine os pares e treine a memória!</b><br>• 32 cartas ilustradas<br>• Tema vida marinha<br>• Diversão para família toda</p>
+        <span class="tag-amarela">Atenção • Memória • Lógica</span>
+      </div>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px; background:#0a1931; color:white; padding:20px; border-radius:12px;">
+      <p>🚀 De 10 voluntários para 100 sorrisos!</p>
+      <button class="btn-amarelo" onclick="mostrarAba('patrocinio')">Quero Patrocinar Este Projeto</button>
+      <p style="margin-top:10px; font-size:11px; opacity:0.8;">© 2024 ÑAPYMI nas Escolas - Projeto Social sem fins lucrativos</p>
+    </div>
+  </section>
+
+  <section id="loja" class="conteudo">
+    <h2>Nossa Loja</h2>
+    <div class="produtos">
+      <div class="card">
+        <img src="bone.jpg" alt="Boné"><h3>Boné Trucker NAPYMI</h3><p>Boné azul marinho com bordado amarelo</p><p class="preco">R$ 50,00</p>
+        <button onclick="comprar('Boné Trucker NAPYMI - R$50,00', 50)">Adicionar</button>
+      </div>
+      <div class="card">
+        <img src="blusa.jpg" alt="Blusa"><h3>Camiseta NAPYMI</h3><p>Camiseta 100% algodão estampa submarina</p><p class="preco">R$ 45,00</p>
+        <button onclick="comprar('Camiseta NAPYMI - R$45,00', 45)">Adicionar</button>
+      </div>
+      <div class="card">
+        <img src="chaveiro.jpg" alt="Chaveiro"><h3>Chaveiro Crab NAPYMI</h3><p>Chaveiro acrílico colecionável</p><p class="preco">R$ 15,00</p>
+        <button onclick="comprar('Chaveiro Crab NAPYMI - R$15,00', 15)">Adicionar</button>
+      </div>
+    </div>
+
+    <div id="checkout">
+      <h3>🛒 Meu Carrinho</h3>
+      <p id="produto-escolhido"><b>Carrinho vazio - adicione produtos acima</b></p>
+      <input id="nome" placeholder="Seu nome completo">
+      <input id="cep" placeholder="Seu CEP">
+      <button class="btn-cinza" onclick="calcularFrete()">Calcular Frete</button>
+      <p id="endereco"></p><p id="frete"></p><p id="total" style="font-size:18px; color:#0a1931; font-weight:bold;"></p>
+      <button class="btn-preto" onclick="finalizarCompra()">Finalizar no WhatsApp</button>
+      <button onclick="carrinho=[]; freteValor=0; atualizarCarrinho(); document.getElementById('endereco').innerText=''; document.getElementById('frete').innerText='';" style="width:100%; margin-top:8px; background:transparent; border:1px solid #ccc; padding:8px; border-radius:8px; cursor:pointer;">Limpar Carrinho</button>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
