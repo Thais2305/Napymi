@@ -1,5 +1,4 @@
-
-l <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -7,146 +6,119 @@ l <!DOCTYPE html>
 <title>NAPYMI - UFRJ</title>
 <link rel="stylesheet" href="style.css">
 <style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb}
 header{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#0a1931;flex-wrap:wrap;gap:8px}
-header img.logo{height:42px;background:white;border-radius:10px;padding:4px 8px}
+header img.logo{height:42px;background:white;border-radius:4px;padding:2px 8px}
 nav{display:flex;gap:5px;flex-wrap:wrap}
-nav button.aba{background:#ffcc00;color:#0a1931;border:none;padding:7px 11px;border-radius:20px;font-weight:900;font-size:11px;cursor:pointer}
-.conteudo{display:none;padding:12px;max-width:900px;margin:auto}
+nav button{background:#ffcc00;color:#0a1931;border:none;padding:7px 11px;border-radius:20px;font-weight:700;font-size:11px;cursor:pointer}
+.conteudo{display:none;padding:12px;max-width:950px;margin:auto}
 .conteudo.ativo{display:block}
-.btn-amarelo{background:#ffcc00;color:#0a1931;border:none;padding:10px 18px;border-radius:20px;font-weight:900;cursor:pointer}
-.img-full{width:100%;border-radius:12px;margin-top:10px}
+.btn-amarelo{background:#ffcc00;color:#0a1931;border:none;padding:10px 18px;border-radius:12px;font-weight:900;cursor:pointer}
+.btn-azul{background:#0a3a6b;color:#ffcc33;border:none;padding:14px 22px;border-radius:28px;font-weight:900;width:100%;cursor:pointer}
+.img-full{width:100%;border-radius:12px}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
 .card{background:white;border-radius:12px;padding:10px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
 .card img{width:100%;border-radius:8px}
-.preco{color:#0a1931;font-weight:900;margin:6px 0}
-#checkout{background:#f5f5f5;border-radius:12px;padding:14px;margin-top:16px}
-#checkout input{width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;margin:6px 0}
-.btn-cinza,.btn-preto{width:100%;padding:10px;border:none;border-radius:10px;font-weight:800;margin-top:8px;cursor:pointer}
-.btn-cinza{background:#ddd}.btn-preto{background:#0a1931;color:#ffcc00}
+.brinquedos-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.brinquedo-box{background:#0a1931;border:2px solid #ffcc00;border-radius:14px;padding:15px;text-align:center;color:white;position:relative}
+.brinquedo-titulo{background:#ffcc00;color:#0a1931;border-radius:20px;padding:6px 12px;font-weight:900;font-size:12px;display:inline-block;margin-bottom:10px;margin-top:-28px;position:relative;top:-8px}
+.brinquedo-box img{width:100%;border-radius:8px;background:white}
+.escolas-wrapper{max-width:950px;margin:auto}
+.escolas-top{background:#0a1931;border-radius:15px;padding:20px;color:white;text-align:center}
+.escolas-cards{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:15px}
+.escolas-card-stat{background:#ffcc00;color:#0a1931;border-radius:12px;padding:14px;flex:1;min-width:110px;text-align:center}
+.escolas-card-stat b.num{font-size:30px;display:block;line-height:1}
 </style>
 </head>
 <body>
 
 <header>
-<img src="logo.png" alt="NAPYMI" class="logo" onerror="this.src='logo.jpg'">
+<img src="logo.png" class="logo" onerror="this.src='logo.jpg'">
 <nav>
-<button class="aba" onclick="mostrarAba('conceito')">Conceito</button>
-<button class="aba" onclick="mostrarAba('identidade')">Identidade</button>
-<button class="aba" onclick="mostrarAba('patrocinio')">Patrocínio</button>
-<button class="aba" onclick="mostrarAba('estrutura')">Estrutura</button>
-<button class="aba" onclick="mostrarAba('escolas')">Nas Escolas</button>
-<button class="aba" onclick="mostrarAba('loja')">Loja</button>
+<button onclick="mostrarAba('conceito')">Conceito</button>
+<button onclick="mostrarAba('identidade')">Identidade Visual</button>
+<button onclick="mostrarAba('patrocinio')">Patrocínio</button>
+<button onclick="mostrarAba('loja')">Loja</button>
+<button onclick="mostrarAba('escolas')">NAPYMI nas Escolas</button>
 </nav>
 </header>
 
-<main>
-
-<!-- CONCEITO -->
-<section id="conceito" class="conteudo">
-<div style="background:#0a1931;border-radius:20px;padding:28px 18px;color:white;text-align:center">
-<div style="background:white;border-radius:16px;padding:12px 18px;display:inline-block;margin-bottom:14px">
-<img src="logo.png" style="width:190px;max-width:80%;height:auto;display:block" onerror="this.src='logo.jpg'">
+<!-- CONCEITO - VERSÃO FINAL APROVADA COM SUA LOGO -->
+<section id="conceito" class="conteudo ativo">
+<div style="max-width:420px;margin:auto;background:white;padding:28px 16px;text-align:center;border-radius:16px">
+<img src="logo.png" style="width:260px;max-width:90%;margin:0 auto 14px;display:block" onerror="this.src='logo.jpg'">
+<p style="font-size:9px;letter-spacing:2.5px;color:#0a3a6b;font-weight:700;margin-bottom:20px">NÚCLEO DE AUTOMAÇÃO E PROJETOS • UFRJ</p>
+<h2 style="font-size:26px;line-height:1.15;font-weight:900;color:#0a3a6b;margin-bottom:14px">Mergulhando em ideias,<br>emergindo soluções.</h2>
+<p style="font-size:12px;line-height:1.6;color:#333;margin-bottom:22px">Somos o time de robótica da UFRJ dedicado ao desenvolvimento de ROVs. Projetamos, construímos e operamos veículos remotamente operados para exploração subaquática.</p>
+<div style="background:#eef2f7;border-radius:20px;padding:14px 10px 12px;margin-bottom:18px">
+<img src="mascote.png" style="width:100%;max-width:320px;display:block;margin:auto;border-radius:12px" onerror="this.style.display='none'">
+<div style="display:flex;gap:8px;justify-content:center;margin-top:14px">
+<span style="background:#dce6f1;color:#0a3a6b;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:800">ROV</span>
+<span style="background:#dce6f1;color:#0a3a6b;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:800">UFRJ</span>
+<span style="background:#dce6f1;color:#0a3a6b;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:800">100% BRASILEIRO</span>
 </div>
-<h2 style="font-size:19px;line-height:1.3;font-weight:800;margin:10px 0">Mergulhando em ideias,<br><span style="color:#ffcc00">emergindo soluções</span></h2>
-<p style="font-size:11px;opacity:0.7;letter-spacing:1.5px;margin-bottom:14px">NÚCLEO DE AUTOMAÇÃO E PROJETOS • UFRJ</p>
-<div style="background:rgba(255,204,0,0.12);border:1.5px solid #ffcc00;border-radius:12px;padding:14px;margin:14px 0;text-align:left">
-<p style="font-size:13px;line-height:1.5">Somos a equipe de <b style="color:#ffcc00">robótica submarina da UFRJ</b>, focada no projeto e construção de <b>ROVs de alta performance</b> para <b>SAUC-E, OBR e RoboSub.</b></p>
+</div>
+<button class="btn-azul" onclick="mostrarAba('escolas')">Conheça o NAPYMI nas Escolas →</button>
+</div>
+</section>
+
+<!-- IDENTIDADE - CONSERTADA SEM IMAGEM QUEBRADA -->
+<section id="identidade" class="conteudo">
+<div style="max-width:420px;margin:auto;background:white;padding:28px 16px;text-align:center;border-radius:16px">
+<h2 style="font-size:22px;font-weight:900;color:#0a3a6b;margin-bottom:20px">Identidade Visual</h2>
+<div style="background:#eef2f7;border-radius:20px;padding:24px 16px;margin-bottom:16px">
+<img src="logo.png" style="width:280px;max-width:95%;margin:0 auto;display:block" onerror="this.src='logo.jpg'">
+<p style="font-size:11px;color:#555;margin-top:12px">Logo oficial oval azul - N com corte de onda</p>
 </div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left">
-<div style="background:white;color:#0a1931;border-radius:10px;padding:12px"><b style="font-size:12px">🎯 MISSÃO</b><br><small style="font-size:11px">Desenvolver tecnologia nacional para exploração oceânica</small></div>
-<div style="background:white;color:#0a1931;border-radius:10px;padding:12px"><b style="font-size:12px">👁️ VISÃO</b><br><small style="font-size:11px">Ser referência em robótica submarina na América Latina</small></div>
+<div style="background:#0a3a6b;border-radius:12px;padding:14px;color:white"><p style="font-size:10px;opacity:0.7;margin:0">PRIMÁRIA</p><p style="font-size:13px;font-weight:800;margin:4px 0 0">#0A1931</p></div>
+<div style="background:#FF8C00;border-radius:12px;padding:14px;color:white"><p style="font-size:10px;opacity:0.9;margin:0">SECUNDÁRIA</p><p style="font-size:13px;font-weight:800;margin:4px 0 0">#FF8C00</p></div>
 </div>
-<div style="background:#ffcc00;color:#0a1931;border-radius:22px;display:inline-block;padding:10px 24px;font-weight:900;font-size:13px;margin-top:16px;cursor:pointer" onclick="mostrarAba('escolas')">Conheça o NAPYMI nas Escolas →</div>
 </div>
 </section>
 
-<section id="identidade" class="conteudo">
-<h2>Identidade Visual</h2>
-<p style="margin:8px 0">Azul #0a1931 + Amarelo #ffcc00 • Mascote Caranguejo</p>
-<div style="background:white;border-radius:12px;padding:12px;display:inline-block"><img src="logo.png" style="width:200px"></div>
-<img src="iden.jpg" onerror="this.style.display='none'" class="img-full">
-</section>
-
+<!-- PATROCÍNIO -->
 <section id="patrocinio" class="conteudo">
-<h2>Patrocínio</h2>
-<p>Seja parceiro da NAPYMI!</p>
-<img src="patrocinio.jpg" onerror="this.style.display='none'" class="img-full">
-<button class="btn-amarelo" onclick="mostrarAba('loja')" style="margin-top:12px">Veja Nossa Loja</button>
-</section>
-
-<!-- ESTRUTURA CORRIGIDA - ELÉTRICA + @Equipe.Napymi -->
-<section id="estrutura" class="conteudo">
-<h2 style="text-align:center;margin-bottom:12px">Estrutura da Equipe</h2>
-<div style="background:#0a1931;border-radius:16px;padding:14px">
-<div style="border:1.5px solid #ffcc00;border-radius:14px;padding:12px;display:flex;align-items:center;gap:12px;margin-bottom:10px"><div style="background:#ffcc00;color:#0a1931;min-width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900">1</div><div style="flex:1"><div style="color:#ffcc00;font-weight:900">Coordenação Geral</div><div style="color:white;font-size:13px">2 pessoas • 2 membros</div></div><div style="color:#ffcc00;font-size:22px">⭐</div></div>
-<div style="border:1.5px solid #ffcc00;border-radius:14px;padding:12px;display:flex;align-items:center;gap:12px;margin-bottom:10px"><div style="background:#ffcc00;color:#0a1931;min-width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900">2</div><div style="flex:1"><div style="color:#ffcc00;font-weight:900">Mecânica</div><div style="color:white;font-size:13px">2 pessoas • 2 membros</div></div><div style="color:#ffcc00;font-size:22px">⚙️</div></div>
-<div style="border:1.5px solid #ffcc00;border-radius:14px;padding:12px;display:flex;align-items:center;gap:12px;margin-bottom:10px"><div style="background:#ffcc00;color:#0a1931;min-width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900">3</div><div style="flex:1"><div style="color:#ffcc00;font-weight:900">Elétrica</div><div style="color:white;font-size:13px">2 pessoas • 2 membros</div></div><div style="color:#ffcc00;font-size:22px">💡</div></div>
-<div style="border:1.5px solid #ffcc00;border-radius:14px;padding:12px;display:flex;align-items:center;gap:12px;margin-bottom:10px"><div style="background:#ffcc00;color:#0a1931;min-width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900">4</div><div style="flex:1"><div style="color:#ffcc00;font-weight:900">Software</div><div style="color:white;font-size:13px">2 pessoas • 2 membros</div></div><div style="color:#ffcc00;font-size:22px">{&lt;/&gt;}</div></div>
-<div style="border:1.5px solid #ffcc00;border-radius:14px;padding:12px;display:flex;align-items:center;gap:12px;margin-bottom:10px"><div style="background:#ffcc00;color:#0a1931;min-width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900">5</div><div style="flex:1"><div style="color:#ffcc00;font-weight:900;font-size:13px">Marketing e Projetos Sociais</div><div style="color:white;font-size:12px">2 pessoas - NAPYMI nas Escolas</div></div><div style="color:#ffcc00;font-size:22px">📣</div></div>
-<div style="background:#ffcc00;color:#0a1931;border-radius:8px;padding:8px;text-align:center;font-weight:900;font-size:11px">UFRJ • Robótica Submarina • Inovação e Educação</div>
-</div>
-<div style="background:#ffcc00;border-radius:12px;padding:12px;text-align:center;margin-top:12px;font-weight:700;font-size:13px;line-height:1.3">🚀 Em breve vamos abrir um processo seletivo<br>para novos membros! Fique ligado no nosso<br>Instagram @Equipe.Napymi</div>
-</section>
-
-<!-- ESCOLAS IGUAL AO ESCOLA.JPG -->
-<section id="escolas" class="conteudo ativo">
-<div style="max-width:440px;margin:auto;background:#0a1931;border-radius:16px;overflow:hidden;padding:14px;color:white;font-family:Arial,sans-serif">
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
-<div style="display:flex;align-items:center;gap:8px">
-<span style="font-size:32px">🦀</span>
-<div style="line-height:1"><div style="color:#ffcc00;font-weight:900;font-size:20px">ÑAPYMI</div><div style="font-size:16px;font-weight:700">nas Escolas</div></div>
-</div>
-<div style="font-size:9px;opacity:0.8">Início • Produtos • Sobre • Contato</div>
-</div>
-<div style="text-align:center">
-<div style="background:#ffcc00;color:#0a1931;display:inline-block;padding:6px 18px;border-radius:20px;font-weight:900;font-size:13px;margin-bottom:8px">NAPYMI nas Escolas</div>
-<p style="font-size:11px;line-height:1.3;opacity:0.9;margin:0 10px 12px">Levando educação e diversão lúdica para escolas públicas através de brinquedos que desenvolvem aprendizado</p>
-</div>
-<div style="display:flex;gap:8px;justify-content:center">
-<div style="background:#ffcc00;color:#0a1931;border-radius:10px;padding:10px 6px;flex:1;text-align:center"><div style="font-size:18px">👥</div><div style="font-size:28px;font-weight:900;line-height:1">100</div><div style="font-size:9px;font-weight:800;line-height:1.1">alunos<br>impactados</div></div>
-<div style="background:#ffcc00;color:#0a1931;border-radius:10px;padding:10px 6px;flex:1;text-align:center"><div style="font-size:18px">🏫</div><div style="font-size:28px;font-weight:900;line-height:1">5</div><div style="font-size:9px;font-weight:800;line-height:1.1">escolas<br>públicas</div></div>
-<div style="background:#ffcc00;color:#0a1931;border-radius:10px;padding:10px 6px;flex:1;text-align:center"><div style="font-size:18px">🙌</div><div style="font-size:28px;font-weight:900;line-height:1">10</div><div style="font-size:9px;font-weight:800;line-height:1.1">10<br>voluntários</div></div>
-</div>
-</div>
-<div style="max-width:440px;margin:14px auto 0;background:white;border-radius:16px;padding:14px;font-family:Arial,sans-serif">
-<h3 style="text-align:center;font-size:13px;margin:0 0 12px;color:#000">CONHEÇA NOSSOS BRINQUEDOS EDUCATIVOS</h3>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-<div style="background:#0a1931;border:2px solid #ffcc00;border-radius:12px;padding:10px;text-align:center">
-<div style="background:#ffcc00;color:#0a1931;border-radius:20px;padding:5px 8px;font-weight:900;font-size:10px;display:inline-block;margin-bottom:8px">QUEBRA-CABEÇA 60 PEÇAS</div>
-<img src="quebra-cabeca.jpg" style="width:100%;border-radius:8px;background:white;aspect-ratio:1;object-fit:cover">
-<div style="text-align:left;margin-top:8px"><p style="color:#ffcc00;font-size:10px;font-weight:800;margin:0">Desafio divertido para a mente!</p><ul style="color:#ffcc00;font-size:9px;margin:4px 0 8px 12px;line-height:1.3"><li>Peças grandes e resistentes</li><li>Ilustração do ecossistema marinho</li><li>28 x 20 cm montado</li></ul></div>
-<span style="background:#ffcc00;color:#0a1931;padding:3px 8px;border-radius:8px;font-size:8px;font-weight:900">DIVERSÃO EDUCATIVA</span>
-</div>
-<div style="background:#0a1931;border:2px solid #ffcc00;border-radius:12px;padding:10px;text-align:center">
-<div style="background:#ffcc00;color:#0a1931;border-radius:20px;padding:5px 8px;font-weight:900;font-size:10px;display:inline-block;margin-bottom:8px">JOGO DA MEMÓRIA 32 CARTAS</div>
-<img src="jogo-memoria.jpg" style="width:100%;border-radius:8px;background:white;aspect-ratio:1;object-fit:cover">
-<div style="text-align:left;margin-top:8px"><p style="color:#ffcc00;font-size:10px;font-weight:800;margin:0">Combine os pares e treine a memória!</p><ul style="color:#ffcc00;font-size:9px;margin:4px 0 8px 12px;line-height:1.3"><li>32 cartas ilustradas</li><li>Tema vida marinha</li><li>Diversão para família toda</li></ul></div>
-<span style="background:#ffcc00;color:#0a1931;padding:3px 6px;border-radius:8px;font-size:7px;font-weight:900">DESENVOLVE: Atenção • Memória • Lógica</span>
-</div>
-</div>
-<div style="background:#0a1931;color:#ffcc00;text-align:center;padding:8px;border-radius:8px;margin-top:12px;font-size:8px">© 2024 NAPYMI • Aprender brincando | contato@napymi.com.br | @Equipe.Napymi</div>
+<div class="escolas-wrapper">
+<div class="escolas-top"><h2>Patrocínio</h2><p>Apoie a robótica subaquática brasileira</p></div>
+<div style="background:white;border-radius:12px;padding:16px;margin-top:12px"><p>Entre em contato: napymi@ufrj.br</p></div>
 </div>
 </section>
 
+<!-- LOJA -->
 <section id="loja" class="conteudo">
-<h2>Nossa Loja</h2>
-<div class="produtos" style="margin-top:12px">
-<div class="card"><img src="bone.jpg" onerror="this.style.display='none'"><h3 style="font-size:13px">Boné Trucker NAPYMI</h3><p class="preco">R$ 50,00</p><button class="btn-amarelo" onclick="comprar('Boné Trucker NAPYMI - R$50,00', 50)" style="width:100%">Adicionar</button></div>
-<div class="card"><img src="blusa.jpg" onerror="this.style.display='none'"><h3 style="font-size:13px">Camiseta NAPYMI</h3><p class="preco">R$ 45,00</p><button class="btn-amarelo" onclick="comprar('Camiseta NAPYMI - R$45,00', 45)" style="width:100%">Adicionar</button></div>
-<div class="card"><img src="chaveiro.jpg" onerror="this.style.display='none'"><h3 style="font-size:13px">Chaveiro Crab</h3><p class="preco">R$ 15,00</p><button class="btn-amarelo" onclick="comprar('Chaveiro Crab - R$15,00', 15)" style="width:100%">Adicionar</button></div>
-</div>
-<div id="checkout">
-<h3>🛒 Meu Carrinho</h3>
-<p id="produto-escolhido"><b>Carrinho vazio</b></p>
-<input id="nome" placeholder="Seu nome completo">
-<input id="cep" placeholder="Seu CEP">
-<button class="btn-cinza" onclick="calcularFrete()">Calcular Frete</button>
-<p id="endereco"></p><p id="frete"></p><p id="total" style="font-weight:bold"></p>
-<button class="btn-preto" onclick="finalizarCompra()">Finalizar no WhatsApp</button>
+<h2 style="color:#0a1931">Loja NAPYMI</h2>
+<div class="produtos">
+<div class="card"><img src="camisa.png" onerror="this.src='logo.png'"><p>Camisa Oficial</p></div>
+<div class="card"><img src="moletom.png" onerror="this.src='logo.png'"><p>Moletom</p></div>
 </div>
 </section>
 
-</main>
-<script src="script.js"></script>
+<!-- ESCOLAS -->
+<section id="escolas" class="conteudo">
+<div class="escolas-wrapper">
+<div class="escolas-top">
+<h2>NAPYMI nas Escolas</h2>
+<p>Levando robótica subaquática para as escolas públicas</p>
+<div class="escolas-cards">
+<div class="escolas-card-stat"><b class="num">+5</b>Escolas</div>
+<div class="escolas-card-stat"><b class="num">200+</b>Alunos</div>
+<div class="escolas-card-stat"><b class="num">3</b>Oficinas</div>
+</div>
+</div>
+<div class="brinquedos-grid">
+<div class="brinquedo-box"><div class="brinquedo-titulo">ROV Educacional</div><img src="rov.png" onerror="this.src='logo.png'"></div>
+<div class="brinquedo-box"><div class="brinquedo-titulo">Kit Maré</div><img src="kit.png" onerror="this.src='logo.png'"></div>
+</div>
+</div>
+</section>
+
+<script>
+function mostrarAba(id){
+document.querySelectorAll('.conteudo').forEach(s=>s.classList.remove('ativo'));
+document.getElementById(id).classList.add('ativo');
+window.scrollTo(0,0);
+}
+</script>
 </body>
 </html>
