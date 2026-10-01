@@ -7,84 +7,80 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{background:#0a1931;color:#fff}
-.nav{display:flex;gap:6px;padding:10px;overflow:auto;background:#fff;position:sticky;top:0;z-index:20}
-.nav button{border:1.5px solid #ddd;border-radius:20px;padding:9px 16px;font-weight:800;background:#fff;color:#0a1931;white-space:nowrap}
-.nav button.ativo{background:#0a1931;color:#fff}
-.sec{display:none;padding:14px;padding-bottom:80px}.sec.ativo{display:block}
-.card{background:#fff;border-radius:20px;padding:16px;color:#0a1931}
-.stat{flex:1;background:#0a1931;border:2px solid #ffcc33;border-radius:18px;padding:12px 6px;text-align:center}
-.stat b{color:#ffcc33;font-size:22px;display:block}
+header{background:#fff;padding:10px;position:sticky;top:0;z-index:20;text-align:center}
+#logo{width:120px;margin:0 auto 8px;display:block}
+nav{display:flex;gap:6px;overflow:auto;justify-content:center}
+nav button{border:1.5px solid #ddd;border-radius:20px;padding:9px 14px;font-weight:800;background:#fff;color:#0a1931;white-space:nowrap}
+nav button.ativo{background:#0a1931;color:#fff;border-color:#0a1931}
+.sec{display:none;padding:12px;padding-bottom:50px}.sec.ativo{display:block}
+.card{background:#fff;color:#0a1931;border-radius:20px;padding:12px;margin-bottom:12px}
+.card h2,.card h3{margin:10px 0 6px;text-align:center}
+.card p{font-size:12px;line-height:1.5;color:#444;text-align:center}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.etq{background:#ffcc33;color:#0a1931;border-radius:20px;padding:8px;text-align:center;font-weight:900;font-size:12px;margin-top:6px}
+.stats{display:flex;gap:6px;margin:10px 0}
+.stats div{flex:1;background:#0a1931;border:2px solid #ffcc33;border-radius:16px;padding:10px;text-align:center}
+.stats b{color:#ffcc33;font-size:18px;display:block}
+.stats span{font-size:10px;color:#fff}
+.box{background:#fff9db;border:2px solid #ffcc33;border-radius:14px;padding:12px;font-size:12px;line-height:1.7;text-align:left;margin-top:8px}
+.btn{background:#0a1931;color:#ffcc33;border-radius:30px;padding:14px;width:100%;border:none;font-weight:900;margin-top:10px}
+input{width:100%;border:1px solid #ddd;border-radius:10px;padding:12px;margin:6px 0}
+img{width:100%;border-radius:16px;display:block}
+.borda{border:3px solid #ffcc33}
 </style>
 </head>
 <body>
 
-<div class="nav">
+<header>
+<img src="logo.jpg" id="logo">
+<nav>
 <button onclick="A('conceito')" id="b-conceito" class="ativo">Conceito</button>
 <button onclick="A('identidade')" id="b-identidade">Identidade</button>
 <button onclick="A('patrocinio')" id="b-patrocinio">Patrocínio</button>
 <button onclick="A('loja')" id="b-loja">Loja</button>
 <button onclick="A('escolas')" id="b-escolas">Escolas</button>
-</div>
+</nav>
+</header>
 
-<!-- CONCEITO: LOGO + MASCOTE + EQUIPE -->
+<!-- CONCEITO + PROJETO + ESTRUTURA TUDO JUNTO -->
 <div id="conceito" class="sec ativo">
-<div class="card" style="text-align:center">
-<img src="logo.png" style="width:180px;margin:0 auto 10px;display:block">
-<h2>O que é o NAPYMI?</h2>
-<p style="font-size:12px;color:#444;line-height:1.5;margin-top:8px">Projeto sem fins lucrativos que leva <b>robótica, vida marinha e brinquedos educativos</b> para escolas públicas do Rio.</p>
-</div>
-<div style="background:#0a1931;border:2px solid #ffcc33;border-radius:20px;padding:14px;margin-top:12px;text-align:center">
-<img src="mascote.jpg" style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:3px solid #ffcc33;margin:0 auto 10px;display:block">
-<h3 style="color:#ffcc33">Sr. Napy - Nosso Engenheiro Mergulhador</h3>
-<p style="font-size:11px;color:#b0c4de;margin-top:6px;line-height:1.5">Com snorkel amarelo, óculos de mergulho e colete NAPYMI com chave inglesa. 10+ voluntários de engenharia, biologia e pedagogia.</p>
-</div>
+<div class="card"><img src="conceito.jpg"><h2>O que é NAPYMI?</h2><p>Projeto sem fins lucrativos que leva robótica, vida marinha e brinquedos educativos para escolas públicas do RJ com o mascote Sr. Napy.</p></div>
+<div class="card"><img src="projeto.jpg"><h2>Nosso Projeto</h2><p>Despertar curiosidade científica com mão na massa, sustentabilidade e inclusão.</p></div>
+<div class="card borda"><img src="estrutura.jpg"><h2>📋 Nossa Estrutura</h2><p>Levamos tudo pronto para a escola: equipe de 10+ voluntários, palestras, oficinas práticas e kits de brinquedos para todos os alunos.</p></div>
 </div>
 
-<!-- IDENTIDADE: LOGO + MASCOTE + CORES -->
 <div id="identidade" class="sec">
-<div class="card" style="text-align:center">
-<h2>Identidade Visual</h2>
-<img src="logo.png" style="width:170px;background:#0a1931;padding:12px;border-radius:16px;margin:12px auto;display:block">
-<p style="font-size:11px;color:#888">Logo oficial oval azul #0A1931 com N laranja</p>
-<div style="display:flex;gap:8px;margin-top:14px;text-align:left">
-<div style="flex:1;background:#f5f5f5;border-radius:12px;padding:10px;display:flex;gap:8px;align-items:center"><div style="width:28px;height:28px;background:#0A1931;border-radius:8px"></div><b style="font-size:10px">#0A1931 Azul Profundo</b></div>
-<div style="flex:1;background:#f5f5f5;border-radius:12px;padding:10px;display:flex;gap:8px;align-items:center"><div style="width:28px;height:28px;background:#FFCC33;border-radius:8px"></div><b style="font-size:10px">#FFCC33 Amarelo</b></div>
+<div class="card"><img src="iden.jpg"><h2>Identidade Visual</h2><p>Logo oval azul #0A1931 com N laranja e amarelo #FFCC33. Mascote Sr. Napy engenheiro mergulhador.</p></div>
 </div>
-<div style="background:#0a1931;border-radius:16px;padding:12px;margin-top:12px">
-<img src="mascote.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:50%;border:2px solid #ffcc33;display:block;margin:0 auto">
-<p style="color:#ffcc33;font-weight:800;margin-top:8px">Sr. Napy</p>
-<p style="color:#a0b8d0;font-size:11px;margin-top:4px">Azul, snorkel amarelo, colete NAPYMI, chave inglesa - fofinho e técnico!</p>
+
+<div id="patrocinio" class="sec">
+<div class="card"><img src="patrocinio.jpg"><h2>Patrocínio</h2><div class="box"><b>R$500</b> - 1 escola (30 alunos)<br><b>R$1500</b> - 3 escolas + logo no site<br><b>R$4000</b> - 10 escolas + logo nos brinquedos</div><button class="btn">Quero Patrocinar</button></div>
 </div>
+
+<div id="loja" class="sec">
+<div class="card"><img src="loja.jpg"><h2>Loja NAPYMI</h2><p>Em breve nas escolas e online</p></div>
+<div class="grid2">
+<div class="card"><img src="bone.jpg"><div class="etq">Boné NAPYMI</div></div>
+<div class="card"><img src="blusa.jpg"><div class="etq">Blusa NAPYMI</div></div>
+<div class="card"><img src="chaveiro.jpg"><div class="etq">Chaveiro Sr. Napy</div></div>
+<div class="card"><img src="memoria.jpg"><div class="etq">Jogo Memória</div></div>
 </div>
 </div>
 
-<!-- PATROCINIO -->
-<div id="patrocinio" class="sec"><div class="card" style="text-align:center"><h2>Patrocínio</h2><p style="font-size:12px;color:#666;margin:8px 0">Apoie STEM nas escolas públicas</p><div style="background:#fff9db;border:2px solid #ffcc33;border-radius:14px;padding:12px;font-size:12px;line-height:1.6;text-align:left"><b>R$500</b> - 1 escola (30 alunos)<br><b>R$1500</b> - 3 escolas + logo no site<br><b>R$4000</b> - 10 escolas + logo nos brinquedos</div></div></div>
-
-<!-- LOJA -->
-<div id="loja" class="sec"><div class="card" style="text-align:center"><h2>Loja</h2><p style="font-size:12px;color:#666;margin-top:6px">Em breve: boné, camiseta, brinquedos</p></div></div>
-
-<!-- ESCOLAS: IMPACTO + BRINQUEDOS + FORM -->
 <div id="escolas" class="sec">
-<div style="display:flex;gap:6px;margin-bottom:12px">
-<div class="stat"><b>100+</b><span style="font-size:10px">alunos</span></div>
-<div class="stat"><b>5+</b><span style="font-size:10px">escolas públicas</span></div>
-<div class="stat"><b>10+</b><span style="font-size:10px">voluntários</span></div>
+<div class="card"><img src="escola.jpg"><h2>Nas Escolas</h2><div class="stats"><div><b>100+</b><span>alunos</span></div><div><b>5+</b><span>escolas</span></div><div><b>10+</b><span>voluntários</span></div></div><p>🤖 Palestras de Robótica<br>🐠 Oficinas Vida Marinha<br>📦 Brinquedos Educativos</p></div>
+<p style="color:#ffcc33;text-align:center;font-weight:900;margin:14px 0">NOSSOS BRINQUEDOS</p>
+<div class="grid2">
+<div class="card"><img src="quebracabeca.jpg"><div class="etq">Quebra-cabeça 60 peças</div></div>
+<div class="card"><img src="memoria.jpg"><div class="etq">Memória 32 Cartas</div></div>
 </div>
-<div style="background:rgba(255,255,255,0.08);padding:10px;border-radius:12px;margin:6px 0;font-size:13px">🤖 <b>Palestras de Robótica</b></div>
-<div style="background:rgba(255,255,255,0.08);padding:10px;border-radius:12px;margin:6px 0;font-size:13px">🐠 <b>Oficinas Vida Marinha</b></div>
-<div style="background:rgba(255,255,255,0.08);padding:10px;border-radius:12px;margin:6px 0;font-size:13px">📦 <b>Brinquedos Educativos</b></div>
-<p style="color:#ffcc33;text-align:center;font-weight:900;margin:16px 0 10px">CONHEÇA NOSSOS BRINQUEDOS</p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-<div class="card" style="padding:8px"><img src="quebracabeca.jpg" style="width:100%;border-radius:12px"><div style="background:#ffcc33;color:#0a1931;border-radius:20px;padding:8px;text-align:center;font-weight:900;font-size:12px;margin-top:6px">Quebra-cabeça 60 peças</div></div>
-<div class="card" style="padding:8px"><img src="memoria.jpg" style="width:100%;border-radius:12px"><div style="background:#ffcc33;color:#0a1931;border-radius:20px;padding:8px;text-align:center;font-weight:900;font-size:12px;margin-top:6px">Memória 32 Cartas</div></div>
-</div>
+<div class="card" style="margin-top:12px"><h3>Inscreva sua Escola</h3><input placeholder="Nome da Escola"><input placeholder="WhatsApp (21) 9xxxx-xxxx"><button class="btn">ENVIAR INSCRIÇÃO</button></div>
 </div>
 
 <script>
 function A(id){
 document.querySelectorAll('.sec').forEach(s=>s.classList.remove('ativo'));
-document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('ativo'));
+document.querySelectorAll('nav button').forEach(b=>b.classList.remove('ativo'));
 document.getElementById(id).classList.add('ativo');
 document.getElementById('b-'+id).classList.add('ativo');
 window.scrollTo(0,0);
