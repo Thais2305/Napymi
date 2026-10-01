@@ -4,8 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAPYMI - ROV Submarine Team UFRJ</title>
+  <title>NAPYMI - nas Escolas</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .escolas-wrapper{max-width:950px;margin:auto}
+    .escolas-top{background:#0a1931;border-radius:15px;padding:20px;color:white;text-align:center}
+    .escolas-cards{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:15px}
+    .escolas-card-stat{background:#ffcc00;color:#0a1931;border-radius:12px;padding:14px;flex:1;min-width:110px;text-align:center}
+    .escolas-card-stat b.num{font-size:38px;display:block;line-height:1}
+    .brinquedos-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:18px}
+    @media(max-width:650px){.brinquedos-grid{grid-template-columns:1fr}}
+    .brinquedo-box{background:#0a1931;border:2px solid #ffcc00;border-radius:14px;padding:15px;text-align:center;color:white;position:relative}
+    .brinquedo-titulo{background:#ffcc00;color:#0a1931;border-radius:20px;padding:6px 12px;font-weight:900;font-size:13px;display:inline-block;margin-bottom:10px;margin-top:-28px;position:relative;top:-8px}
+    .brinquedo-box img{width:100%;border-radius:8px;background:white}
+  </style>
 </head>
 <body>
 
@@ -22,72 +34,110 @@
 </header>
 
 <main>
-  <section id="conceito" class="conteudo ativo">
+  <section id="conceito" class="conteudo">
     <div class="banner-conceito">
       <h1>🚤 NAPYMI</h1>
       <h2>Mergulhando em ideias, emergindo soluções</h2>
-      <p>ROV • Submarine Robotics Team — UFRJ • Ilha do Fundão</p>
+      <p>ROV • Submarine Robotics Team — UFRJ</p>
       <button class="btn-amarelo" onclick="mostrarAba('escolas')">Conheça nosso Projeto Social</button>
     </div>
     <h2>CONCEITO</h2>
-    <p>Somos a equipe de robótica submarina da UFRJ, dedicada a projetar e construir ROVs de alta performance para competições como SAUC-E, OBR e RoboSub.</p>
-    <img src="rov.jpg" class="img-full" alt="ROV NAPYMI">
+    <p>Equipe de robótica submarina da UFRJ.</p>
+    <img src="rov.jpg" class="img-full" alt="ROV">
   </section>
 
   <section id="identidade" class="conteudo">
     <h2>Identidade Visual</h2>
-    <p>Paleta oficial: Azul Marinho #0a1931 e Amarelo #ffcc00. Mascote caranguejo azul com boné NAPYMI.</p>
     <img src="iden.jpg" class="img-full" alt="Identidade">
   </section>
 
   <section id="patrocinio" class="conteudo">
     <h2>Patrocínio</h2>
-    <p>Seja parceiro da NAPYMI! Apoie inovação e educação.</p>
     <img src="patrocinio.jpg" class="img-full" alt="Patrocínio">
-    <button class="btn-amarelo" onclick="mostrarAba('loja')">Veja Nossa Loja</button>
   </section>
 
   <section id="estrutura" class="conteudo">
     <h2>Estrutura - Nossa Equipe</h2>
-    <p>Somos <b>10 voluntários</b> divididos em 5 áreas estratégicas, impactando <b>100 alunos</b> em <b>5 escolas públicas</b>.</p>
-    <img src="estrutura.jpg" class="img-full" alt="Equipe">
-    <div class="aviso-processo">
-      🚀 Em breve vamos abrir um processo seletivo para novos membros! Fique ligado no nosso Instagram @napymi.ufrj
-    </div>
+    <p>Somos <b>10 voluntários</b> impactando <b>100 alunos</b> em <b>5 escolas públicas</b>.</p>
+    <img src="estrutura.jpg" class="img-full" alt="Estrutura">
+    <div class="aviso-processo">🚀 Em breve processo seletivo! @napymi.ufrj</div>
   </section>
 
-  <section id="escolas" class="conteudo">
-    <h2>ÑAPYMI nas Escolas - Projeto Social</h2>
-    <p><b>Educação e Sustentabilidade Marinha</b> - Levamos robótica e preservação do oceano para crianças de escolas públicas.</p>
-    
-    <div class="stats">
-      <div class="stat"><b>100</b><br>alunos impactados</div>
-      <div class="stat"><b>5</b><br>escolas públicas</div>
-      <div class="stat"><b>10</b><br>voluntários</div>
-    </div>
+  <!-- ABA QUE VOCÊ QUERIA IGUAL AO PRINT -->
+  <section id="escolas" class="conteudo ativo">
+    <div class="escolas-wrapper">
+      
+      <div class="escolas-top">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <img src="logo.jpg" style="width:55px;height:55px;border-radius:50%;background:white;padding:3px">
+            <div style="text-align:left;line-height:1.1">
+              <div style="color:#ffcc00;font-weight:900;font-size:26px">ÑAPYMI</div>
+              <div style="font-size:20px;font-weight:700">nas Escolas</div>
+            </div>
+          </div>
+          <div style="font-size:12px;opacity:0.9">Início &nbsp;•&nbsp; Produtos &nbsp;•&nbsp; Sobre &nbsp;•&nbsp; Contato</div>
+        </div>
 
-    <h3>CONHEÇA NOSSOS BRINQUEDOS EDUCATIVOS</h3>
-    <p>Desenvolvidos pela equipe para levar o fundo do mar para a sala de aula!</p>
+        <div style="background:#ffcc00;color:#0a1931;display:inline-block;padding:6px 22px;border-radius:20px;font-weight:900;margin:15px 0 8px">NAPYMI nas Escolas</div>
+        <p style="font-size:14px;max-width:600px;margin:0 auto 12px">Levando educação e diversão lúdica para escolas públicas através de brinquedos que desenvolvem aprendizado</p>
 
-    <div class="produtos">
-      <div class="card" style="border:2px solid #ffcc00;">
-        <img src="quebra-cabeca.jpg" alt="Quebra-cabeça 60 peças">
-        <h3>QUEBRA-CABEÇA 60 PEÇAS</h3>
-        <p><b>Desafio divertido para a mente!</b><br>• Peças grandes e resistentes<br>• Ilustração do ecossistema marinho<br>• 28x20cm montado</p>
-        <span class="tag-azul">DIVERSÃO EDUCATIVA</span>
+        <div class="escolas-cards">
+          <div class="escolas-card-stat">
+            <div style="font-size:22px">👥</div>
+            <b class="num">100</b>
+            <small><b>alunos impactados</b></small>
+          </div>
+          <div class="escolas-card-stat">
+            <div style="font-size:22px">🏫</div>
+            <b class="num">5</b>
+            <small><b>escolas públicas</b></small>
+          </div>
+          <div class="escolas-card-stat">
+            <div style="font-size:22px">🙌</div>
+            <b class="num">10</b>
+            <small><b>10 voluntários</b></small>
+          </div>
+        </div>
       </div>
-      <div class="card" style="border:2px solid #ffcc00;">
-        <img src="jogo-memoria.jpg" alt="Jogo da Memória 32 cartas">
-        <h3>JOGO DA MEMÓRIA 32 CARTAS</h3>
-        <p><b>Combine os pares e treine a memória!</b><br>• 32 cartas ilustradas<br>• Tema vida marinha<br>• Diversão para família toda</p>
-        <span class="tag-amarela">Atenção • Memória • Lógica</span>
+
+      <h3 style="text-align:center;margin:18px 0 10px;letter-spacing:0.5px">CONHEÇA NOSSOS BRINQUEDOS EDUCATIVOS</h3>
+
+      <div class="brinquedos-grid">
+        <!-- QUEBRA-CABEÇA -->
+        <div class="brinquedo-box">
+          <div class="brinquedo-titulo">QUEBRA-CABEÇA 60 PEÇAS</div>
+          <img src="quebra-cabeca.jpg" alt="Quebra-cabeça 60 peças">
+          <div style="text-align:left;margin-top:10px">
+            <p style="color:#ffcc00;font-weight:800;font-size:13px">Desafio divertido para a mente!</p>
+            <ul style="font-size:11px;margin:5px 0 10px 14px;line-height:1.4">
+              <li>Peças grandes e resistentes</li>
+              <li>Ilustração do ecossistema marinho</li>
+              <li>28 x 20 cm montado</li>
+            </ul>
+          </div>
+          <span style="background:#ffcc00;color:#0a1931;padding:4px 12px;border-radius:10px;font-size:10px;font-weight:900">DIVERSÃO EDUCATIVA</span>
+        </div>
+
+        <!-- JOGO MEMORIA -->
+        <div class="brinquedo-box">
+          <div class="brinquedo-titulo">JOGO DA MEMÓRIA 32 CARTAS</div>
+          <img src="jogo-memoria.jpg" alt="Jogo da Memória 32 Cartas">
+          <div style="text-align:left;margin-top:10px">
+            <p style="color:#ffcc00;font-weight:800;font-size:13px">Combine os pares e treine a memória!</p>
+            <ul style="font-size:11px;margin:5px 0 10px 14px;line-height:1.4">
+              <li>32 cartas ilustradas</li>
+              <li>Tema vida marinha</li>
+              <li>Diversão para família toda</li>
+            </ul>
+          </div>
+          <span style="background:#ffcc00;color:#0a1931;padding:4px 12px;border-radius:10px;font-size:10px;font-weight:900">DESENVOLVE: Atenção • Memória • Lógica</span>
+        </div>
       </div>
-    </div>
-    
-    <div style="text-align:center; margin-top:20px; background:#0a1931; color:white; padding:20px; border-radius:12px;">
-      <p>🚀 De 10 voluntários para 100 sorrisos!</p>
-      <button class="btn-amarelo" onclick="mostrarAba('patrocinio')">Quero Patrocinar Este Projeto</button>
-      <p style="margin-top:10px; font-size:11px; opacity:0.8;">© 2024 ÑAPYMI nas Escolas - Projeto Social sem fins lucrativos</p>
+
+      <div style="background:#0a1931;color:#ffcc00;text-align:center;padding:10px;border-radius:10px;margin-top:15px;font-size:11px">
+        © 2024 NAPYMI • Aprender brincando | contato@napymi.com.br | @napymi.escolas
+      </div>
     </div>
   </section>
 
@@ -95,28 +145,26 @@
     <h2>Nossa Loja</h2>
     <div class="produtos">
       <div class="card">
-        <img src="bone.jpg" alt="Boné"><h3>Boné Trucker NAPYMI</h3><p>Boné azul marinho com bordado amarelo</p><p class="preco">R$ 50,00</p>
+        <img src="bone.jpg" alt="Boné"><h3>Boné Trucker NAPYMI</h3><p class="preco">R$ 50,00</p>
         <button onclick="comprar('Boné Trucker NAPYMI - R$50,00', 50)">Adicionar</button>
       </div>
       <div class="card">
-        <img src="blusa.jpg" alt="Blusa"><h3>Camiseta NAPYMI</h3><p>Camiseta 100% algodão estampa submarina</p><p class="preco">R$ 45,00</p>
+        <img src="blusa.jpg" alt="Blusa"><h3>Camiseta NAPYMI</h3><p class="preco">R$ 45,00</p>
         <button onclick="comprar('Camiseta NAPYMI - R$45,00', 45)">Adicionar</button>
       </div>
       <div class="card">
-        <img src="chaveiro.jpg" alt="Chaveiro"><h3>Chaveiro Crab NAPYMI</h3><p>Chaveiro acrílico colecionável</p><p class="preco">R$ 15,00</p>
+        <img src="chaveiro.jpg" alt="Chaveiro"><h3>Chaveiro Crab</h3><p class="preco">R$ 15,00</p>
         <button onclick="comprar('Chaveiro Crab NAPYMI - R$15,00', 15)">Adicionar</button>
       </div>
     </div>
-
     <div id="checkout">
       <h3>🛒 Meu Carrinho</h3>
-      <p id="produto-escolhido"><b>Carrinho vazio - adicione produtos acima</b></p>
+      <p id="produto-escolhido"><b>Carrinho vazio</b></p>
       <input id="nome" placeholder="Seu nome completo">
       <input id="cep" placeholder="Seu CEP">
       <button class="btn-cinza" onclick="calcularFrete()">Calcular Frete</button>
-      <p id="endereco"></p><p id="frete"></p><p id="total" style="font-size:18px; color:#0a1931; font-weight:bold;"></p>
+      <p id="endereco"></p><p id="frete"></p><p id="total" style="font-weight:bold"></p>
       <button class="btn-preto" onclick="finalizarCompra()">Finalizar no WhatsApp</button>
-      <button onclick="carrinho=[]; freteValor=0; atualizarCarrinho(); document.getElementById('endereco').innerText=''; document.getElementById('frete').innerText='';" style="width:100%; margin-top:8px; background:transparent; border:1px solid #ccc; padding:8px; border-radius:8px; cursor:pointer;">Limpar Carrinho</button>
     </div>
   </section>
 </main>
