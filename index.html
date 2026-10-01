@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAPYMI UFRJ</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{background:#071A32;font-family:Arial}.top{background:#071A32;text-align:center;padding:15px;position:sticky;top:0;z-index:99}.top img{height:55px}.menu{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:10px}.menu button{background:#11294d;color:#7fb3ff;border:0;padding:8px 13px;border-radius:20px;font-weight:bold}.menu button.ativo{background:#FFC300;color:#071A32}.pag{display:none;max-width:520px;margin:0 auto}.pag.ativa{display:block}.pag img{width:100%}</style>
+</head>
+<body>
+<div class="top">
+<img src="logo.jpg">
+<div class="menu">
+<button class="ativo" onclick="trocar('loja',this)">Loja</button>
+<button onclick="trocar('escolas',this)">NAPYMI nas Escolas</button>
+<button onclick="trocar('pat',this)">Patrocinio</button>
+<button onclick="trocar('iden',this)">Identidade</button>
+<button onclick="trocar('conc',this)">Conceito</button>
+</div>
+</div>
+<div id="loja" class="pag ativa"><img src="loja.jpg"></div>
+<div id="escolas" class="pag"><img src="projeto.jpg"></div>
+<div id="pat" class="pag"><img src="patrocinio.jpg"></div>
+<div id="iden" class="pag"><img src="iden.jpg"></div>
+<div id="conc" class="pag"><img src="conceito.jpg"></div>
+<script>function trocar(id,btn){document.querySelectorAll('.pag').forEach(p=>p.classList.remove('ativa'));document.getElementById(id).classList.add('ativa');document.querySelectorAll('.menu button').forEach(b=>b.classList.remove('ativo'));btn.classList.add('ativo');}</script>
+</body>
+</html>
