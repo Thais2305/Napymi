@@ -1,46 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAPYMI - UFRJ</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f0f3f8}
+header{background:#0a1931;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+header img{height:38px;background:white;border-radius:6px;padding:3px 8px}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav button{background:#ffcc00;color:#0a1931;border:none;padding:8px 14px;border-radius:20px;font-weight:800;font-size:12px;cursor:pointer}
+.conteudo{display:none;max-width:440px;margin:16px auto;padding:0 12px}
+.conteudo.ativo{display:block}
+.card{background:white;border-radius:18px;padding:26px 18px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+</style>
+</head>
+<body>
+
+<header>
+<img src="logo.png" onerror="this.src='logo.jpg'">
+<nav>
+<button onclick="mostrar('conceito')">Conceito</button>
+<button onclick="mostrar('identidade')">Identidade Visual</button>
+<button onclick="mostrar('patrocinio')">Patrocínio</button>
+<button onclick="mostrar('loja')">Loja</button>
+<button onclick="mostrar('escolas')">NAPYMI nas Escolas</button>
+</nav>
+</header>
 
 <section id="conceito" class="conteudo ativo">
-  <div style="max-width:420px;margin:auto;background:white;padding:28px 16px;text-align:center;font-family:Arial,sans-serif">
-    <img src="logo.png" style="width:260px;max-width:90%;margin:0 auto 14px;display:block" onerror="this.src='logo.jpg'">
-    <p style="font-size:9px;letter-spacing:2.5px;color:#0a3a6b;font-weight:700;margin-bottom:20px">NÚCLEO DE AUTOMAÇÃO E PROJETOS • UFRJ</p>
-    <h2 style="font-size:26px;line-height:1.15;font-weight:900;color:#0a3a6b;margin-bottom:14px">Mergulhando em ideias,<br>emergindo soluções.</h2>
-    <p style="font-size:12px;line-height:1.6;color:#333;margin-bottom:22px">
-      Somos o time de robótica da UFRJ dedicado ao desenvolvimento de ROVs. Projetamos, construímos e operamos veículos remotamente operados para exploração subaquática.
-    </p>
-    <div style="background:#eef2f7;border-radius:20px;padding:14px 10px 12px;margin-bottom:18px">
-      <img src="mascote.png" style="width:100%;max-width:320px;display:block;margin:auto" onerror="this.style.display='none'">
-      <div style="display:flex;gap:8px;justify-content:center;margin-top:14px">
-        <span style="background:#dce6f1;color:#0a3a6b;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:800">ROV</span>
-        <span style="background:#dce6f1;color:#0a3a6b;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:800">UFRJ</span>
-        <span style="background:#dce6f1;color:#0a3a6b;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:800">100% BRASILEIRO</span>
-      </div>
-    </div>
-    <button onclick="mostrarAba('escolas')" style="background:#0a3a6b;color:#ffcc33;border:none;padding:14px 22px;border-radius:28px;font-weight:900;font-size:15px;cursor:pointer;width:100%">Conheça o NAPYMI nas Escolas →</button>
-  </div>
+<div class="card">
+<img src="logo.png" style="width:260px;max-width:90%;margin:0 auto 14px;display:block" onerror="this.style.display='none'">
+<p style="font-size:9px;letter-spacing:2.4px;color:#0a3a6b;font-weight:700;margin:0 0 20px">NÚCLEO DE AUTOMAÇÃO E PROJETOS • UFRJ</p>
+<h1 style="font-size:26px;font-weight:900;color:#0a3a6b;line-height:1.15;margin:0 0 14px">Mergulhando em ideias,<br>emergindo soluções.</h1>
+<p style="font-size:13px;color:#444;line-height:1.6;margin:0">Somos o time de robótica da UFRJ dedicado ao desenvolvimento de ROVs. Projetamos, construímos e operamos veículos remotamente operados para exploração subaquática.</p>
+
+<div style="background:#eef2f7;border-radius:20px;padding:16px;margin-top:20px">
+<img src="mascote.png" style="width:100%;max-width:320px;display:block;margin:0 auto;border-radius:12px" onerror="this.alt='Mascote NAPYMI'">
+<div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap">
+<span style="background:#dce6f1;color:#0a3a6b;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800">ROV</span>
+<span style="background:#dce6f1;color:#0a3a6b;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800">UFRJ</span>
+<span style="background:#dce6f1;color:#0a3a6b;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800">100% BRASILEIRO</span>
+</div>
+</div>
+
+<button onclick="mostrar('escolas')" style="margin-top:18px;background:#0a3a6b;color:#ffcc33;border:none;padding:14px 22px;border-radius:28px;font-weight:900;width:100%;cursor:pointer">Conheça o NAPYMI nas Escolas →</button>
+</div>
 </section>
 
-<!-- IDENTIDADE - CONSERTADA, SEM IMAGEM QUEBRADA -->
 <section id="identidade" class="conteudo">
-  <div style="max-width:420px;margin:auto;background:white;padding:28px 16px;text-align:center;font-family:Arial,sans-serif">
-    
-    <h2 style="font-size:22px;font-weight:900;color:#0a3a6b;margin-bottom:20px">Identidade Visual</h2>
-    
-    <!-- LOGO OFICIAL - MESMA QUE NO CONCEITO -->
-    <div style="background:#eef2f7;border-radius:20px;padding:24px 16px;margin-bottom:16px">
-      <img src="logo.png" style="width:280px;max-width:95%;margin:0 auto;display:block" onerror="this.src='logo.jpg'">
-      <p style="font-size:11px;color:#555;margin-top:12px">Logo oficial NAPYMI</p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left">
-      <div style="background:#0a3a6b;border-radius:12px;padding:14px;color:white">
-        <p style="font-size:10px;opacity:0.7;margin:0">PRIMÁRIA</p>
-        <p style="font-size:13px;font-weight:800;margin:4px 0 0">#0A3A6B</p>
-      </div>
-      <div style="background:#FF8C00;border-radius:12px;padding:14px;color:white">
-        <p style="font-size:10px;opacity:0.9;margin:0">SECUNDÁRIA</p>
-        <p style="font-size:13px;font-weight:800;margin:4px 0 0">#FF8C00</p>
-      </div>
-    </div>
-
-  </div>
+<div class="card">
+<h2 style="color:#0a3a6b;margin-top:0">Identidade Visual</h2>
+<div style="background:#eef2f7;border-radius:20px;padding:28px 16px">
+<img src="logo.png" style="width:300px;max-width:95%;display:block;margin:auto">
+</div>
+<p style="font-size:12px;color:#666;margin-top:12px">Sua logo oficial oval azul - sem imagem quebrada</p>
+</div>
 </section>
+
+<section id="patrocinio" class="conteudo">
+<div class="card" style="background:#0a1931;color:white">
+<h2 style="margin-top:0">Patrocínio</h2>
+<p style="color:#cbd5e1">Apoie a robótica subaquática brasileira</p>
+</div>
+<div class="card" style="margin-top:12px">
+<p>Entre em contato: <b>napymi@ufrj.br</b></p>
+</div>
+</section>
+
+<section id="loja" class="conteudo">
+<div class="card">
+<h2 style="color:#0a3a6b;margin-top:0">Loja NAPYMI</h2>
+<p style="font-size:13px;color:#666">Em breve - produtos oficiais</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
+<div style="background:#f7f8fb;padding:20px;border-radius:14px">👕<br><b>Camisa</b></div>
+<div style="background:#f7f8fb;padding:20px;border-radius:14px">🧥<br><b>Moletom</b></div>
+</div>
+</div>
+</section>
+
+<section id="escolas" class="conteudo">
+<div class="card" style="background:#0a1931;color:white">
+<h2 style="margin-top:0">NAPYMI nas Escolas</h2>
+<p style="color:#cbd5e1">Levando robótica para as escolas do Rio</p>
+</div>
+</section>
+
+<script>
+function mostrar(id){
+document.querySelectorAll('.conteudo').forEach(s=>s.classList.remove('ativo'));
+document.getElementById(id).classList.add('ativo');
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
