@@ -1,13 +1,32 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#071A32;font-family:Arial}
-.topo{background:#071A32;text-align:center;padding:15px;position:sticky;top:0;z-index:99}
-.logo{height:55px}
-.menu{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-.menu button{background:#11294d;color:#7fb3ff;border:0;padding:8px 13px;border-radius:20px;font-weight:bold}
-.menu button.ativo{background:#FFC300;color:#071A32}
-.pagina{display:none;max-width:520px;margin:0 auto}
-.pagina.ativa{display:block}
-.pagina img{width:100%}
-.conteudo{ display:none; }
-.conteudo.ativo{ display:block; }
-.aba, button{ cursor:pointer; }
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+
+body { background:#f5f7ff; color:#111; }
+
+header { background:#001a4d; color:white; padding:20px; text-align:center; }
+header h1 { letter-spacing:4px; margin-bottom:15px; }
+
+nav { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+.aba { 
+  cursor:pointer; 
+  padding:8px 12px; 
+  border:2px solid white; 
+  background:white; 
+  color:#001a4d; 
+  border-radius:6px; 
+  font-weight:bold;
+}
+.aba:hover{ background:#ffcc00; }
+
+main { max-width:900px; margin:20px auto; padding:20px; background:white; border-radius:12px; }
+
+.conteudo { display:none; }
+.conteudo.ativo { display:block; }
+
+.conteudo h2 { margin-bottom:10px; color:#001a4d; }
+.conteudo p { margin-bottom:20px; line-height:1.5; }
+
+.produtos { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+.card { border:1px solid #ddd; padding:15px; border-radius:10px; text-align:center; width:200px; background:white; }
+.card button { cursor:pointer; margin-top:8px; padding:6px 12px; background:black; color:white; border:none; border-radius:6px; }
+
+#checkout input { border:1px solid #aaa; border-radius:6px; }
