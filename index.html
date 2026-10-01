@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<header>
-  <h1>NAPYMI</h1>
-  <nav>
+<header style="text-align:center; background:#0a1931; padding:15px;">
+  <img src="logo.jpg" alt="Logo NAPYMI" style="max-width:180px;">
+  <nav style="margin-top:15px;">
     <button class="aba" onclick="mostrarAba('conceito')">Conceito</button>
     <button class="aba" onclick="mostrarAba('identidade')">Identidade</button>
     <button class="aba" onclick="mostrarAba('patrocinio')">Patrocínio</button>
@@ -21,66 +21,55 @@
 
 <main>
   <section id="conceito" class="conteudo ativo">
-    <h2>Conceito</h2>
-    <p>NAPYMI é uma marca que une moda, identidade e propósito.</p>
+    <img src="conceito.jpg" style="width:100%; border-radius:12px; max-width:350px; display:block; margin:0 auto;">
+    <h2>CONCEITO</h2>
+    <p><b>ROV • Submarine Robotics Team — UFRJ</b><br>Ilha do Fundão, Rio de Janeiro</p>
+    <p>Somos a equipe de robótica submarina da UFRJ, dedicada a projetar e construir ROVs de alta performance.</p>
+    <img src="projeto.jpg" style="width:100%; border-radius:12px; margin-top:10px;">
   </section>
 
   <section id="identidade" class="conteudo">
-    <h2>Identidade Visual</h2>
-    <p>Logo minimalista, cores neutras e atitude.</p>
-    <img src="patrocinio.jpg" alt="Identidade" style="max-width:100%;">
+    <h2>Identidade</h2>
+    <img src="iden.jpg" style="width:100%; border-radius:12px;">
   </section>
 
   <section id="patrocinio" class="conteudo">
     <h2>Patrocínio</h2>
-    <p>Marcas parceiras que acreditam no nosso movimento.</p>
+    <img src="patrocinio.jpg" style="width:100%; border-radius:12px;">
   </section>
 
   <section id="estrutura" class="conteudo">
     <h2>Estrutura</h2>
-    <p>Nosso time, produção e bastidores.</p>
+    <p>Nossa equipe e estrutura de projetos.</p>
+    <img src="loja.jpg" style="width:100%; border-radius:12px;">
   </section>
 
   <section id="loja" class="conteudo">
     <h2>Loja NAPYMI</h2>
-    
-    <div class="produtos" style="display:flex; gap:20px; flex-wrap:wrap;">
+    <div class="produtos">
       <div class="card">
-        <img src="bone.png" alt="Boné" width="150">
-        <h3>Boné NAPYMI</h3>
-        <p>R$ 15,90</p>
+        <img src="bone.jpg" width="150"><h3>Boné NAPYMI</h3><p>R$ 15,90</p>
         <button onclick="comprar('Boné NAPYMI - R$15,90')">Adicionar</button>
       </div>
       <div class="card">
-        <img src="camisa.png" alt="Camisa" width="150">
-        <h3>Camisa NAPYMI</h3>
-        <p>R$ 15,90</p>
-        <button onclick="comprar('Camisa NAPYMI - R$15,90')">Adicionar</button>
+        <img src="blusa.jpg" width="150"><h3>Blusa NAPYMI</h3><p>R$ 15,90</p>
+        <button onclick="comprar('Blusa NAPYMI - R$15,90')">Adicionar</button>
       </div>
       <div class="card">
-        <img src="chaveiro.png" alt="Chaveiro" width="150">
-        <h3>Chaveiro NAPYMI</h3>
-        <p>R$ 15,90</p>
+        <img src="chaveiro.jpg" width="150"><h3>Chaveiro NAPYMI</h3><p>R$ 15,90</p>
         <button onclick="comprar('Chaveiro NAPYMI - R$15,90')">Adicionar</button>
       </div>
     </div>
 
-    <!-- CHECKOUT COM CADASTRO E FRETE -->
-    <div id="checkout" style="margin-top:40px; padding:20px; border:1px solid #ccc; border-radius:12px; background:#f9f9f9;">
+    <div id="checkout" style="margin-top:30px; padding:15px; border:1px solid #ccc; border-radius:12px; background:#f9f9f9;">
       <h3>Finalizar compra</h3>
-      <p id="produto-escolhido" style="font-weight:bold;">Nenhum produto selecionado</p>
-      
-      <input id="nome" placeholder="Seu nome completo" style="width:100%; margin:8px 0; padding:10px;">
-      <input id="cep" placeholder="Seu CEP - ex: 20000-000" style="width:100%; margin:8px 0; padding:10px;">
-      <button onclick="calcularFrete()" style="cursor:pointer; padding:10px; width:100%;">Calcular Frete</button>
-      
-      <p id="endereco"></p>
-      <p id="frete"></p>
-      <p id="total" style="font-weight:bold; font-size:18px;"></p>
-      
-      <button onclick="finalizarCompra()" style="cursor:pointer; background:black; color:white; padding:12px; width:100%; border-radius:8px; margin-top:10px;">Cadastrar e Comprar no WhatsApp</button>
+      <p id="produto-escolhido"><b>Nenhum produto selecionado</b></p>
+      <input id="nome" placeholder="Seu nome" style="width:100%; padding:10px; margin:5px 0;">
+      <input id="cep" placeholder="Seu CEP" style="width:100%; padding:10px; margin:5px 0;">
+      <button onclick="calcularFrete()" style="width:100%; padding:10px;">Calcular Frete</button>
+      <p id="endereco"></p><p id="frete"></p><p id="total" style="font-weight:bold;"></p>
+      <button onclick="finalizarCompra()" style="width:100%; padding:12px; background:black; color:white; border-radius:8px; margin-top:10px;">Cadastrar e Comprar no WhatsApp</button>
     </div>
-
   </section>
 </main>
 
