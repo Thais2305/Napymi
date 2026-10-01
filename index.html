@@ -1,98 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NAPYMI - UFRJ</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NAPYMI - UFRJ Robótica Submarina</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f0f3f8}
-header{background:#0a1931;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-header img{height:38px;background:white;border-radius:6px;padding:3px 8px}
-nav{display:flex;gap:6px;flex-wrap:wrap}
-nav button{background:#ffcc00;color:#0a1931;border:none;padding:8px 14px;border-radius:20px;font-weight:800;font-size:12px;cursor:pointer}
-.conteudo{display:none;max-width:440px;margin:16px auto;padding:0 12px}
-.conteudo.ativo{display:block}
-.card{background:white;border-radius:18px;padding:26px 18px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a1931;color:#fff;font-family:system-ui,Arial;padding-bottom:100px}
+.top{background:#08162e;padding:10px 12px;position:sticky;top:0;z-index:20}
+.top img{height:28px;background:#fff;padding:2px;border-radius:6px}
+.menu{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.menu button{background:#ffcc33;color:#0a1931;border:none;padding:7px 11px;border-radius:20px;font-weight:900;font-size:10.5px;cursor:pointer}
+.menu button.ativo{background:#fff}
+.sec{display:none;padding:14px}
+.sec.ativa{display:block}
+.card-num{border:1.5px solid #ffcc33;border-radius:14px;padding:12px;margin-bottom:10px;display:flex;align-items:center;gap:12px;background:#0f234a}
+.card-num .n{background:#ffcc33;color:#0a1931;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:28px;flex-shrink:0}
+.card-white{background:#fff;color:#0a1931;border-radius:16px;padding:12px;margin-bottom:12px}
+.card-white img{width:100%;border-radius:12px;display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.prod{background:#fff;color:#0a1931;border-radius:14px;padding:10px}
+.prod img{width:100%;border-radius:10px;aspect-ratio:1;object-fit:cover;background:#eaf2ff}
+.prod h4{font-size:11px;margin:6px 0 2px;line-height:1.2}
+.prod .price{font-weight:900;font-size:13px}
+.prod button{background:#0a1931;color:#ffcc33;border:none;padding:8px;border-radius:20px;width:100%;font-weight:900;font-size:11px;margin-top:6px;cursor:pointer}
+.footer-yellow{background:#ffcc33;color:#0a1931;border-radius:14px;padding:10px;text-align:center;font-weight:900;font-size:12px;margin-top:10px}
+.yellow-box{background:#ffcc33;color:#0a1931;border-radius:12px;padding:14px;text-align:center;font-weight:800;font-size:13px;margin:14px 0}
+.badge{background:#ffcc33;border-radius:20px;padding:8px;text-align:center;font-weight:900;font-size:11px;margin-top:8px;line-height:1.2}
+.carrinho{position:fixed;bottom:10px;left:10px;right:10px;background:#fff;color:#0a1931;border-radius:18px;padding:14px;box-shadow:0 -4px 30px #0008;z-index:40;display:none;max-height:85vh;overflow:auto}
+.carrinho.mostra{display:block}
+.cep-input{display:flex;gap:6px;margin:8px 0}
+.cep-input input{flex:1;padding:10px;border-radius:10px;border:1px solid #ccc}
+.cep-input button{padding:10px 14px;background:#0a1931;color:#ffcc33;border:none;border-radius:10px;font-weight:900}
+.pag{border:1px solid #ddd;border-radius:10px;padding:10px;margin:6px 0;display:flex;align-items:center;gap:8px;cursor:pointer}
+.pag.sel{border:2px solid #0a1931;background:#fff8d0}
 </style>
 </head>
 <body>
 
-<header>
-<img src="logo.png" onerror="this.src='logo.jpg'">
-<nav>
-<button onclick="mostrar('conceito')">Conceito</button>
-<button onclick="mostrar('identidade')">Identidade Visual</button>
-<button onclick="mostrar('patrocinio')">Patrocínio</button>
-<button onclick="mostrar('loja')">Loja</button>
-<button onclick="mostrar('escolas')">NAPYMI nas Escolas</button>
-</nav>
-</header>
-
-<section id="conceito" class="conteudo ativo">
-<div class="card">
-<img src="logo.png" style="width:260px;max-width:90%;margin:0 auto 14px;display:block" onerror="this.style.display='none'">
-<p style="font-size:9px;letter-spacing:2.4px;color:#0a3a6b;font-weight:700;margin:0 0 20px">NÚCLEO DE AUTOMAÇÃO E PROJETOS • UFRJ</p>
-<h1 style="font-size:26px;font-weight:900;color:#0a3a6b;line-height:1.15;margin:0 0 14px">Mergulhando em ideias,<br>emergindo soluções.</h1>
-<p style="font-size:13px;color:#444;line-height:1.6;margin:0">Somos o time de robótica da UFRJ dedicado ao desenvolvimento de ROVs. Projetamos, construímos e operamos veículos remotamente operados para exploração subaquática.</p>
-
-<div style="background:#eef2f7;border-radius:20px;padding:16px;margin-top:20px">
-<img src="mascote.png" style="width:100%;max-width:320px;display:block;margin:0 auto;border-radius:12px" onerror="this.alt='Mascote NAPYMI'">
-<div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap">
-<span style="background:#dce6f1;color:#0a3a6b;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800">ROV</span>
-<span style="background:#dce6f1;color:#0a3a6b;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800">UFRJ</span>
-<span style="background:#dce6f1;color:#0a3a6b;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800">100% BRASILEIRO</span>
+<div class="top">
+<img src="logo.jpg" onerror="this.src='logo.png'">
+<div class="menu">
+<button onclick="aba('conceito',this)">Conceito</button>
+<button onclick="aba('identidade',this)">Identidade</button>
+<button class="ativo" onclick="aba('estrutura',this)">Estrutura</button>
+<button onclick="aba('escolas',this)">ÑAPYMI nas Escolas</button>
+<button onclick="aba('loja',this)" id="btnLoja">Loja 🛒<span id="qtdCart" style="background:#0a1931;color:#ffcc33;padding:2px 6px;border-radius:10px;margin-left:4px;display:none">0</span></button>
+<button onclick="aba('patrocinio',this)">Patrocínio</button>
 </div>
 </div>
 
-<button onclick="mostrar('escolas')" style="margin-top:18px;background:#0a3a6b;color:#ffcc33;border:none;padding:14px 22px;border-radius:28px;font-weight:900;width:100%;cursor:pointer">Conheça o NAPYMI nas Escolas →</button>
+<div id="conceito" class="sec">
+<div class="card-white"><img src="conceito.jpg"><h3>Conceito STEM</h3><p style="font-size:12px">Aprender, Explorar, Construir - Robótica com materiais recicláveis</p></div>
+<img src="projeto.jpg" style="width:100%;border-radius:16px">
 </div>
-</section>
 
-<section id="identidade" class="conteudo">
-<div class="card">
-<h2 style="color:#0a3a6b;margin-top:0">Identidade Visual</h2>
-<div style="background:#eef2f7;border-radius:20px;padding:28px 16px">
-<img src="logo.png" style="width:300px;max-width:95%;display:block;margin:auto">
+<div id="identidade" class="sec">
+<div class="card-white"><img src="iden.jpg"><h3>Identidade Visual</h3><p style="font-size:12px">Azul marinho + Amarelo - Cores do oceano</p></div>
+<div class="card-white"><img src="logo.jpg"><h3>Logo NAPYMI</h3></div>
 </div>
-<p style="font-size:12px;color:#666;margin-top:12px">Sua logo oficial oval azul - sem imagem quebrada</p>
-</div>
-</section>
 
-<section id="patrocinio" class="conteudo">
-<div class="card" style="background:#0a1931;color:white">
-<h2 style="margin-top:0">Patrocínio</h2>
-<p style="color:#cbd5e1">Apoie a robótica subaquática brasileira</p>
+<div id="estrutura" class="sec ativa">
+<div class="card-num"><div class="n">1</div><div><h3 style="color:#ffcc33">Coordenação Geral</h3><p style="font-size:13px"><b>2 pessoas</b><br>👥 2 membros</p></div><div style="margin-left:auto;font-size:26px">⭐</div></div>
+<div class="card-num"><div class="n">2</div><div><h3 style="color:#ffcc33">Mecânica</h3><p style="font-size:13px"><b>2 pessoas</b><br>👥 2 membros</p></div><div style="margin-left:auto;font-size:26px">⚙️</div></div>
+<div class="card-num"><div class="n">3</div><div><h3 style="color:#ffcc33">Eletrônica</h3><p style="font-size:13px"><b>2 pessoas</b><br>👥 2 membros</p></div><div style="margin-left:auto;font-size:26px">🔌</div></div>
+<div class="card-num"><div class="n">4</div><div><h3 style="color:#ffcc33">Software</h3><p style="font-size:13px"><b>2 pessoas</b><br>👥 2 membros</p></div><div style="margin-left:auto;font-size:18px">{&lt;/&gt;}</div></div>
+<div class="card-num"><div class="n">5</div><div><h3 style="color:#ffcc33;font-size:13px">Marketing e Projetos Sociais</h3><p style="font-size:11px"><b>2 pessoas - NAPYMI nas Escolas</b><br>👥 2 membros</p></div><div style="margin-left:auto">📢</div></div>
+<div class="footer-yellow">UFRJ • Robótica Submarina • Inovação e Educação</div>
+<div class="yellow-box">🚀 Em breve vamos abrir um processo seletivo para novos membros! Fique ligado no nosso Instagram @napymi.ufrj</div>
+<img src="estrutura.jpg" style="width:100%;border-radius:16px;margin-top:6px">
 </div>
-<div class="card" style="margin-top:12px">
-<p>Entre em contato: <b>napymi@ufrj.br</b></p>
-</div>
-</section>
 
-<section id="loja" class="conteudo">
-<div class="card">
-<h2 style="color:#0a3a6b;margin-top:0">Loja NAPYMI</h2>
-<p style="font-size:13px;color:#666">Em breve - produtos oficiais</p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
-<div style="background:#f7f8fb;padding:20px;border-radius:14px">👕<br><b>Camisa</b></div>
-<div style="background:#f7f8fb;padding:20px;border-radius:14px">🧥<br><b>Moletom</b></div>
+<div id="escolas" class="sec">
+<h3 style="color:#ffcc33;margin-bottom:10px">NAPYMI nas Escolas - Kits Educativos</h3>
+<div class="card-white"><img src="escola.jpg"><p style="font-size:12px">Levando robótica submarina para crianças</p></div>
+<h4 style="color:#ffcc33;margin:12px 0 8px">CONHEÇA NOSSOS BRINQUEDOS</h4>
+<div class="grid2">
+<div class="prod"><img src="quebracabeca.jpg"><h4>Quebra-cabeça 60 peças Vida Marinha</h4><div class="price">R$ 49,90</div><button onclick="addCart('Quebra-cabeça 60 peças',49.9)">Adicionar ao Carrinho</button></div>
+<div class="prod"><img src="memoria.jpg"><h4>Jogo da Memória 32 Cartas</h4><div class="price">R$ 39,90</div><button onclick="addCart('Jogo Memória 32 cartas',39.9)">Adicionar ao Carrinho</button></div>
 </div>
 </div>
-</section>
 
-<section id="escolas" class="conteudo">
-<div class="card" style="background:#0a1931;color:white">
-<h2 style="margin-top:0">NAPYMI nas Escolas</h2>
-<p style="color:#cbd5e1">Levando robótica para as escolas do Rio</p>
+<div id="loja" class="sec">
+<h3 style="color:#ffcc33;margin-bottom:10px">LOJA OFICIAL NAPYMI</h3>
+<div class="grid2">
+<div class="prod"><img src="blusa.jpg"><h4>Blusa NAPYMI Oficial</h4><div class="price">R$ 89,90</div><button onclick="addCart('Blusa NAPYMI',89.9)">Adicionar</button></div>
+<div class="prod"><img src="bone.jpg"><h4>Boné NAPYMI</h4><div class="price">R$ 59,90</div><button onclick="addCart('Boné NAPYMI',59.9)">Adicionar</button></div>
+<div class="prod"><img src="chaveiro.jpg"><h4>Chaveiro Sr. Napy</h4><div class="price">R$ 24,90</div><button onclick="addCart('Chaveiro Sr Napy',24.9)">Adicionar</button></div>
+<div class="prod"><img src="quebracabeca.jpg"><h4>Quebra-cabeça</h4><div class="price">R$ 49,90</div><button onclick="addCart('Quebra-cabeça',49.9)">Adicionar</button></div>
+<div class="prod"><img src="memoria.jpg"><h4>Memória</h4><div class="price">R$ 39,90</div><button onclick="addCart('Memória',39.9)">Adicionar</button></div>
+<div class="prod"><img src="loja.jpg"><h4>Kit Completo 5 itens</h4><div class="price">R$ 199,90</div><button onclick="addCart('Kit Completo',199.9)">Adicionar</button></div>
 </div>
-</section>
+</div>
+
+<div id="patrocinio" class="sec">
+<div class="card-white"><img src="patrocinio.jpg"><h3>Seja Patrocinador</h3><p style="font-size:12px">Apoie UFRJ Robótica Submarina</p></div>
+<div class="card-white"><h3>Contato Patrocínio</h3><p style="font-size:12px">napymi.ufrj@gmail.com<br>@napymi.ufrj</p></div>
+</div>
+
+<div id="carrinhoBox" class="carrinho">
+<div style="display:flex;justify-content:space-between"><b>🛒 Meu Carrinho</b><span onclick="fecharCart()" style="cursor:pointer;font-size:18px">✕</span></div>
+<div id="listaCart" style="margin:10px 0;max-height:110px;overflow:auto;font-size:12px"></div>
+<div class="cep-input"><input id="cep" placeholder="CEP ex: 21941-901" maxlength="9"><button onclick="calcularFrete()">Calcular Frete</button></div>
+<div id="freteInfo" style="font-size:11px"></div>
+<div style="border-top:1px dashed #ccc;margin:8px 0;padding-top:8px;font-size:12px">
+<div style="display:flex;justify-content:space-between"><span>Subtotal:</span><b id="subtotal">R$ 0,00</b></div>
+<div style="display:flex;justify-content:space-between"><span>Frete:</span><b id="freteVal">R$ 0,00</b></div>
+<div style="display:flex;justify-content:space-between;font-size:14px;margin-top:4px"><span>Total:</span><b id="totalVal">R$ 0,00</b></div>
+</div>
+<b style="font-size:12px">Forma de Pagamento:</b>
+<div class="pag" onclick="selPag(this,'PIX')"><span>💠</span><div><b>PIX - 5% OFF</b><br><small style="font-size:10px">Aprovação imediata - Chave: napymi.ufrj@gmail.com</small></div></div>
+<div class="pag" onclick="selPag(this,'Cartão de Crédito')"><span>💳</span><div><b>Cartão de Crédito</b><br><small style="font-size:10px">Até 3x sem juros - Mercado Pago</small></div></div>
+<div class="pag" onclick="selPag(this,'Boleto')"><span>🧾</span><div><b>Boleto Bancário</b><br><small style="font-size:10px">Vencimento 2 dias úteis</small></div></div>
+<button onclick="finalizar()" style="background:#00b050;color:#fff;border:none;width:100%;padding:13px;border-radius:30px;font-weight:900;margin-top:10px;font-size:14px">FINALIZAR NO WHATSAPP</button>
+<small style="font-size:9px;display:block;text-align:center;margin-top:6px;color:#666">Pagamento seguro: PIX | Mercado Pago | PagSeguro</small>
+</div>
 
 <script>
-function mostrar(id){
-document.querySelectorAll('.conteudo').forEach(s=>s.classList.remove('ativo'));
-document.getElementById(id).classList.add('ativo');
-window.scrollTo(0,0);
-}
+let cart=[],frete=0,forma='';
+function aba(id,btn){document.querySelectorAll('.sec').forEach(s=>s.classList.remove('ativa'));document.getElementById(id).classList.add('ativa');document.querySelectorAll('.menu button').forEach(b=>b.classList.remove('ativo'));btn.classList.add('ativo');window.scrollTo(0,0)}
+function addCart(nome,preco){let it=cart.find(i=>i.nome==nome);if(it)it.qtd++;else cart.push({nome,preco,qtd:1});atualiza();document.getElementById('carrinhoBox').classList.add('mostra')}
+function atualiza(){let lista=document.getElementById('listaCart');let q=0,sub=0;lista.innerHTML='';cart.forEach((it,i)=>{q+=it.qtd;sub+=it.preco*it.qtd;lista.innerHTML+=`<div style="display:flex;justify-content:space-between;margin:4px 0"><span>${it.qtd}x ${it.nome}</span><span>R$ ${(it.preco*it.qtd).toFixed(2)} <span onclick="cart.splice(${i},1);atualiza()" style="color:red;cursor:pointer">✕</span></span></div>`});document.getElementById('qtdCart').style.display=q?'inline':'none';document.getElementById('qtdCart').innerText=q;document.getElementById('subtotal').innerText='R$ '+sub.toFixed(2);document.getElementById('totalVal').innerText='R$ '+(sub+frete).toFixed(2);if(cart.length==0)fecharCart()}
+function fecharCart(){document.getElementById('carrinhoBox').classList.remove('mostra')}
+function calcularFrete(){let cep=document.getElementById('cep').value.replace(/\D/g,'');if(cep.length<8){alert('CEP inválido');return}if(cep.startsWith('2')){frete=15;document.getElementById('freteInfo').innerText='📦 Rio de Janeiro - R$ 15,00 (1-2 dias)'}else if(cep.startsWith('0')||cep.startsWith('1')||cep.startsWith('3')){frete=25;document.getElementById('freteInfo').innerText='📦 Sudeste - R$ 25,00 (2-4 dias)'}else{frete=35;document.getElementById('freteInfo').innerText='📦 Demais regiões - R$ 35,00 (4-7 dias)'}let sub=cart.reduce((s,i)=>s+i.preco*i.qtd,0);if(sub>=200){frete=0;document.getElementById('freteInfo').innerText='🎉 FRETE GRÁTIS acima de R$200!'}document.getElementById('freteVal').innerText='R$ '+frete.toFixed(2);atualiza()}
+function selPag(el,t){document.querySelectorAll('.pag').forEach(p=>p.classList.remove('sel'));el.classList.add('sel');forma=t}
+function finalizar(){if(!cart.length){alert('Carrinho vazio');return}if(!document.getElementById('freteInfo').innerText){alert('Calcule o frete');return}if(!forma){alert('Escolha pagamento');return}let sub=cart.reduce((s,i)=>s+i.preco*i.qtd,0);let total=sub+frete;let msg=`Olá NAPYMI! Pedido:%0A`;cart.forEach(i=>{msg+=`• ${i.qtd}x ${i.nome} R$ ${(i.preco*i.qtd).toFixed(2)}%0A`});msg+=`%0ASubtotal R$ ${sub.toFixed(2)}%0AFrete ${document.getElementById('cep').value} R$ ${frete.toFixed(2)}%0A*Total R$ ${total.toFixed(2)}*%0APagamento: ${forma}`;window.open('https://wa.me/5521999999999?text='+msg,'_blank')}
 </script>
-
 </body>
 </html>
