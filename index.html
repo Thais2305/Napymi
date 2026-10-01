@@ -7,26 +7,21 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{background:#0a1931;color:#fff}
-.nav{display:flex;gap:6px;padding:10px;overflow:auto;background:#fff;position:sticky;top:0;z-index:10}
-.nav button{border:1px solid #ddd;border-radius:20px;padding:8px 14px;font-weight:700;white-space:nowrap;background:#fff;cursor:pointer}
+.nav{display:flex;gap:6px;padding:10px;overflow:auto;background:#fff;position:sticky;top:0;z-index:20}
+.nav button{border:1.5px solid #ddd;border-radius:20px;padding:9px 16px;font-weight:800;background:#fff;color:#0a1931;cursor:pointer;font-size:13px}
 .nav button.ativo{background:#0a1931;color:#fff}
-.sec{display:none;padding:14px}
-.sec.ativo{display:block}
+.sec{display:none;padding:14px;padding-bottom:90px}.sec.ativo{display:block}
 .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:10px 0 18px}
 .stat{background:#0a1931;border:2px solid #ffcc33;border-radius:18px;padding:12px 6px;text-align:center}
 .stat b{color:#ffcc33;font-size:22px;display:block}
-.stat span{font-size:11px;line-height:1.2}
-.item{font-size:13px;margin:10px 0;display:flex;gap:6px}
-.titulo-amarelo{color:#ffcc33;text-align:center;font-weight:900;margin:18px 0 10px;font-size:14px}
-.card-white{background:#fff;border-radius:18px;padding:8px;color:#0a1931}
-.card-white img{width:100%;border-radius:12px;display:block}
-.etiqueta{background:#ffcc33;color:#0a1931;border-radius:20px;padding:8px;text-align:center;font-weight:900;font-size:12px;margin-top:8px}
-.btn-verde{background:#00e676;color:#0a1931;border-radius:30px;padding:14px;text-align:center;font-weight:900;margin:14px 0;border:none;width:100%;font-size:15px}
-.btn-branco{background:#fff;color:#0a1931;border-radius:30px;padding:14px;text-align:center;font-weight:900;margin:10px 0;border:2px solid #ffcc33;width:100%;font-size:15px}
+.card-white{background:#fff;border-radius:20px;padding:10px;color:#0a1931}
+.card-white img{width:100%;border-radius:14px;display:block;background:#f0f0f0}
+.etiqueta{background:#ffcc33;color:#0a1931;border-radius:20px;padding:9px;text-align:center;font-weight:900;font-size:12px;margin-top:8px}
+.btn-verde{background:#00e676;color:#0a1931;border-radius:30px;padding:15px;text-align:center;font-weight:900;margin:16px 0 8px;border:none;width:100%;font-size:15px}
+.btn-branco{background:#fff;color:#0a1931;border-radius:30px;padding:14px;text-align:center;font-weight:900;margin:8px 0;border:2px solid #ffcc33;width:100%}
 </style>
 </head>
 <body>
-
 <div class="nav">
 <button onclick="abrir('conceito')" id="b-conceito" class="ativo">Conceito</button>
 <button onclick="abrir('identidade')" id="b-identidade">Identidade</button>
@@ -37,46 +32,29 @@ body{background:#0a1931;color:#fff}
 
 <div id="conceito" class="sec ativo">
 <div class="stats">
-<div class="stat"><b>100+</b><span>alunos impactados</span></div>
-<div class="stat"><b>5+</b><span>escolas públicas</span></div>
-<div class="stat"><b>10+</b><span>voluntários ativos</span></div>
+<div class="stat"><b>100+</b><span style="font-size:11px">alunos impactados</span></div>
+<div class="stat"><b>5+</b><span style="font-size:11px">escolas públicas</span></div>
+<div class="stat"><b>10+</b><span style="font-size:11px">voluntários ativos</span></div>
+</div>
+<div style="font-size:13px;margin:10px 0;background:rgba(255,255,255,0.07);padding:10px;border-radius:12px">🤖 <b>Palestras de Robótica</b> - tecnologia lúdica</div>
+<div style="font-size:13px;margin:10px 0;background:rgba(255,255,255,0.07);padding:10px;border-radius:12px">🐠 <b>Oficinas Vida Marinha</b> - conservação</div>
+<div style="font-size:13px;margin:10px 0;background:rgba(255,255,255,0.07);padding:10px;border-radius:12px">📦 <b>Brinquedos Educativos</b> - Sr. Napy</div>
+<div style="color:#ffcc33;text-align:center;font-weight:900;margin:20px 0 12px;font-size:15px">CONHEÇA NOSSOS BRINQUEDOS</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div class="card-white"><img src="Napymi/quebracabeca.jpg"><div class="etiqueta">Quebra-cabeça 60 peças</div></div>
+<div class="card-white"><img src="Napymi/memoria.jpg"><div class="etiqueta">Memória 32 Cartas</div></div>
+</div>
+<button class="btn-verde" onclick="abrir('escolas')">🙋 Quero Participar como Voluntário</button>
+<button class="btn-branco" onclick="abrir('patrocinio')">♡ Quero Patrocinar</button>
 </div>
 
-<div class="item">🤖 <b>Palestras de Robótica</b> - tecnologia e programação</div>
-<div class="item">🐠 <b>Oficinas Vida Marinha</b> - ecossistema e conservação</div>
-<div class="item">📦 <b>Brinquedos Educativos</b> - jogos pedagógicos</div>
+<div id="identidade" class="sec"><div class="card-white" style="padding:16px"><h2 style="text-align:center">Identidade Visual</h2><p style="text-align:center;font-size:11px;color:#888">Logo oval azul com N laranja</p><div style="display:flex;gap:8px;margin-top:14px"><div style="flex:1;background:#f5f5f5;border-radius:12px;padding:8px;display:flex;gap:8px;align-items:center"><div style="width:32px;height:32px;background:#0A1931;border-radius:8px"></div><div style="font-size:10px;font-weight:800">#0A1931 Azul</div></div><div style="flex:1;background:#f5f5f5;border-radius:12px;padding:8px;display:flex;gap:8px;align-items:center"><div style="width:32px;height:32px;background:#FFCC33;border-radius:8px"></div><div style="font-size:10px;font-weight:800">#FFCC33 Amarelo</div></div></div><div style="background:#0a1931;color:#fff;border-radius:16px;padding:14px;margin-top:12px"><h3 style="color:#FFCC33;font-size:14px">Sr. Napy</h3><p style="font-size:11px;line-height:1.5;margin-top:6px">Engenheiro mergulhador colete amarelo NAPYMI - mão na massa e sustentabilidade</p></div></div></div>
 
-<div class="titulo-amarelo">CONHEÇA NOSSOS BRINQUEDOS</div>
+<div id="patrocinio" class="sec"><div class="card-white" style="padding:16px"><h2 style="text-align:center">Patrocínio</h2><p style="font-size:12px;text-align:center;color:#666;margin:8px 0">Apoie educação STEM</p><div style="background:#fff9db;border:2px solid #ffcc33;border-radius:14px;padding:12px;font-size:12px"><b>R$500</b> - 1 escola<br><b>R$1500</b> - 3 escolas + logo<br><b>R$4000</b> - 10 escolas + logo nos brinquedos</div></div></div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-<div class="card-white">
-<img src="Napymi/quebracabeca.jpg?v=3" onerror="this.src='Napymi/quebracabeca.jpg'">
-<div class="etiqueta">Quebra-cabeça 60 peças</div>
-</div>
-<div class="card-white">
-<img src="Napymi/memoria.jpg?v=3" onerror="this.src='Napymi/memoria.jpg'">
-<div class="etiqueta">Memória 32 Cartas</div>
-</div>
-</div>
+<div id="loja" class="sec"><div class="card-white" style="padding:16px"><h2 style="text-align:center">Loja</h2><p style="font-size:12px;text-align:center;color:#666">Em breve: boné, camiseta, brinquedos</p></div></div>
 
-<button class="btn-verde">🙋 Quero Participar como Voluntário</button>
-<button class="btn-branco">♡ Quero Patrocinar Este Projeto</button>
-<p style="text-align:center;font-size:10px;color:#aaa;margin-top:8px">© 2024 NAPYMI nas Escolas • Sem fins lucrativos</p>
-</div>
-
-<div id="identidade" class="sec">
-<div class="card-white" style="padding:14px">
-<h2 style="text-align:center">Identidade Visual</h2>
-<p style="text-align:center;font-size:11px;color:#666">Logo principal - oval azul com N laranja</p>
-<img src="Napymi/logo.jpg" style="width:100px;margin:10px auto;display:block;background:#0a1931;padding:10px;border-radius:14px" onerror="this.style.display='none'">
-<p style="font-size:11px;margin-top:10px"><b>Paleta:</b> #0A1931 Azul Profundo + #FFCC33 Amarelo</p>
-<p style="font-size:11px;margin-top:6px"><b>Sr. Napy:</b> Engenheiro mergulhador com colete amarelo NAPYMI</p>
-</div>
-</div>
-
-<div id="patrocinio" class="sec"><div class="card-white" style="padding:14px"><h2>Patrocínio</h2><p style="font-size:12px">Apoie a educação STEM nas escolas públicas.</p></div></div>
-<div id="loja" class="sec"><div class="card-white" style="padding:14px"><h2>Loja</h2><p style="font-size:12px">Em breve: Boné, Camiseta e Brinquedos NAPYMI.</p></div></div>
-<div id="escolas" class="sec"><div class="card-white" style="padding:14px"><h2>Escolas</h2><p style="font-size:12px">Inscreva sua escola para receber o projeto.</p></div></div>
+<div id="escolas" class="sec"><div style="background:#fff;border-radius:20px;padding:16px;color:#0a1931"><h2 style="text-align:center">Escolas</h2><p style="text-align:center;font-size:12px;color:#666;margin:6px 0 14px">Leve o NAPYMI grátis para escola pública</p><div style="background:#f5f8ff;border-radius:14px;padding:12px;margin-bottom:12px"><h3 style="font-size:13px">🎁 O que a escola recebe?</h3><p style="font-size:11px;margin-top:6px;line-height:1.5">✅ Palestra Robótica<br>✅ Oficina Vida Marinha<br>✅ Kit 2 brinquedos por aluno<br>✅ Certificado</p></div><label style="font-size:11px;font-weight:700">Nome da Escola</label><input style="width:100%;border:1px solid #ddd;border-radius:10px;padding:10px;margin:4px 0 8px;font-size:12px" placeholder="E.M. ..."><label style="font-size:11px;font-weight:700">WhatsApp</label><input style="width:100%;border:1px solid #ddd;border-radius:10px;padding:10px;margin:4px 0 12px;font-size:12px" placeholder="(21) 9xxxx-xxxx"><button onclick="alert('Enviado! Responderemos em 48h.')" style="width:100%;background:#0a1931;color:#ffcc33;border:none;border-radius:30px;padding:14px;font-weight:900;font-size:14px">ENVIAR INSCRIÇÃO</button></div></div>
 
 <script>
 function abrir(id){
