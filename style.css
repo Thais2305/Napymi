@@ -1,0 +1,29 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#071A32;font-family:Arial,sans-serif;color:#fff}
+.topo{background:#071A32;text-align:center;padding:15px 10px;position:sticky;top:0;z-index:100;border-bottom:1px solid #11294d}
+.topo img.logo{height:55px;margin-bottom:10px}
+.menu{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.menu button{
+  background:#11294d;
+  color:#7fb3ff;
+  border:none;
+  padding:8px 14px;
+  border-radius:20px;
+  font-weight:bold;
+  font-size:13px;
+  cursor:pointer;
+  transition:0.2s
+}
+.menu button.ativo{
+  background:#FFC300;
+  color:#071A32;
+}
+.pagina{
+  display:none;
+  max-width:520px;
+  margin:0 auto;
+  animation:fade 0.3s
+}
+.pagina.ativa{display:block}
+.pagina img{width:100%;display:block}
+@keyframes fade{from{opacity:0}to{opacity:1}}
