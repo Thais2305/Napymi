@@ -13,19 +13,20 @@ body{background:#061023;color:white;min-height:100vh}
 .tab.ativo{background:#FFC91F;color:#0a1931}
 .sec{display:none;padding:12px 12px 40px 12px}.sec.ativo{display:block}
 .mascote{width:100%;border-radius:20px;display:block;background:#0a1931}
-.frases{text-align:center;font-weight:800;margin:16px 0 12px 0;font-size:19px}
+.frases{text-align:center;font-weight:800;margin:16px 0 12px 0;font-size:19px;line-height:1.3}
 .btn{background:#FFC91F;color:#0a1931;border:none;padding:12px 28px;border-radius:28px;font-weight:800;font-size:15px;cursor:pointer;margin:4px}
 .btn-outline{background:transparent;color:#FFC91F;border:2px solid #FFC91F}
 .btn-grande{width:95%;padding:16px;font-size:17px}
 .center{text-align:center;margin-bottom:18px}
-.card{background:white;color:#0a1931;border-radius:20px;padding:18px;margin-top:12px}
-.banner-escola{width:100%;border-radius:20px;margin-bottom:12px;background:#0a1931}
+.card{background:white;color:#0a1931;border-radius:20px;padding:18px;margin-top:12px;line-height:1.55}
+.banner-escola{width:100%;border-radius:20px;display:block;margin-bottom:12px;background:#0a1931}
 .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}
 .stat{background:#0a1931;border:2px solid #FFC91F;border-radius:16px;padding:14px 6px;text-align:center}
 .stat b{color:#FFC91F;font-size:20px;display:block}.stat span{font-size:12px;color:#fff}
 .brinqs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-.brinq{background:white;border-radius:16px;padding:10px;text-align:center;color:#0a1931}
-.brinq b{display:block;background:#FFC91F;border-radius:20px;padding:8px;font-size:12px;margin-top:6px}
+.brinq{background:white;border-radius:16px;padding:8px;text-align:center;color:#0a1931;overflow:hidden}
+.brinq img{width:100%;border-radius:10px;display:block;height:110px;object-fit:cover;background:#f0f0f0}
+.brinq b{display:block;background:#FFC91F;border-radius:20px;padding:8px;font-size:12px;margin-top:8px}
 .titulo-amarelo{text-align:center;color:#FFC91F;font-weight:800;margin:18px 0 10px 0;font-size:18px}
 .estrutura-box{background:#0a1931;border-radius:22px;padding:12px;border:1px solid rgba(255,201,31,0.25)}
 .est-item{background:#0f2040;border:1.5px solid #FFC91F;border-radius:16px;display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:10px}
@@ -33,7 +34,7 @@ body{background:#061023;color:white;min-height:100vh}
 .est-txt b{color:#FFC91F;font-size:17px;display:block}.est-txt span{font-size:13px;color:#d0d8e8}
 .est-icon{margin-left:auto;font-size:26px}
 .est-footer{background:#FFC91F;color:#0a1931;text-align:center;font-weight:800;padding:12px;border-radius:14px;margin-top:10px;font-size:12px}
-.est-aviso{background:#FFC91F;color:#0a1931;text-align:center;font-weight:700;padding:14px;border-radius:14px;margin-top:14px;font-size:14px}
+.est-aviso{background:#FFC91F;color:#0a1931;text-align:center;font-weight:700;padding:14px;border-radius:14px;margin-top:14px;font-size:14px;line-height:1.3}
 .id-box{background:#0a1931;border-radius:22px;padding:14px;border:1px solid rgba(255,201,31,0.25)}
 .id-titulo{color:#FFC91F;font-weight:900;font-size:20px;text-align:center;margin:8px 0 14px 0}
 .id-card{background:white;color:#0a1931;border-radius:16px;padding:14px;margin-bottom:12px;line-height:1.4}
@@ -70,7 +71,7 @@ body{background:#061023;color:white;min-height:100vh}
 <button class="btn" onclick="A('estrutura')">Conheça o Projeto</button>
 <button class="btn btn-outline" onclick="A('escolas')">NAPYMI nas Escolas</button>
 </div>
-<div class="card"><h3>CONCEITO</h3><p><b>ROV • Submarine Robotics Team — UFRJ</b><br>Ilha do Fundão, Rio</p><br><p>Somos a equipe de robótica submarina da UFRJ.</p></div>
+<div class="card"><h3>CONCEITO</h3><p><b>ROV • Submarine Robotics Team — UFRJ</b><br>Ilha do Fundão, Rio de Janeiro</p><br><p>Somos a equipe de robótica submarina da UFRJ, dedicada a projetar, construir e programar ROVs de alta performance.</p></div>
 </div>
 
 <div id="estrutura" class="sec">
@@ -88,9 +89,10 @@ body{background:#061023;color:white;min-height:100vh}
 <div id="identidade" class="sec">
 <div class="id-box">
 <div class="id-titulo">IDENTIDADE VISUAL</div>
-<div class="id-card"><b>💙 NAPYMI</b><br>Mascote robô submarino amigável que representa curiosidade e engenharia.</div>
-<div class="id-card"><b>🎨 Paleta</b><div class="id-cores"><div class="cor cor-azul">AZUL OCEANO<br>#0A1931</div><div class="cor cor-amarelo">AMARELO ENERGIA<br>#FFC91F</div></div></div>
-<div class="id-card"><b>🤖 Mascote</b><br>- Olhos grandes: curiosidade<br>- Sorriso: espírito de equipe<br>- Azul: oceano e tecnologia<br>- Amarelo: energia</div>
+<div class="id-card"><b>💙 NAPYMI - ROV Team UFRJ</b><br>Nome inspirado em curiosidade e inovação. Mascote robô submarino amigável que representa a criatividade dos estudantes de engenharia.</div>
+<div class="id-card"><b>🎨 Paleta de Cores</b><div class="id-cores"><div class="cor cor-azul">AZUL OCEANO<br>#0A1931</div><div class="cor cor-amarelo">AMARELO ENERGIA<br>#FFC91F</div></div></div>
+<div class="id-card"><b>🤖 Mascote ÑAPYMI</b><br>- Olhos grandes: curiosidade<br>- Sorriso: espírito de equipe<br>- Corpo azul: tecnologia e oceano<br>- Detalhes amarelos: energia e inovação</div>
+<div class="id-card"><b>✒️ Tipografia</b><br>Títulos: Bold e arredondado<br>Textos: Simples e legível<br>Tom de voz: Jovem, divertido e educativo</div>
 <div style="background:#FFC91F;color:#0a1931;text-align:center;font-weight:800;padding:12px;border-radius:14px;margin-top:6px;font-size:12px">UFRJ • Robótica Submarina • Inovação e Educação</div>
 </div>
 </div>
@@ -107,10 +109,19 @@ body{background:#061023;color:white;min-height:100vh}
 </div>
 
 <div id="escolas" class="sec">
-<img class="banner-escola" src="escolas.jpg" onerror="this.style.display='none'">
+<img class="banner-escola" src="escolas.jpg" alt="NAPYMI nas Escolas" onerror="this.style.display='none'">
 <div class="card" style="margin-top:0"><h3 style="text-align:center">Nas Escolas</h3><div class="stats"><div class="stat"><b>100+</b><span>alunos</span></div><div class="stat"><b>5+</b><span>escolas</span></div><div class="stat"><b>10+</b><span>voluntários</span></div></div><p>🤖 Palestras de Robótica<br>🌊 Oficinas Vida Marinha<br>📦 Brinquedos Educativos</p></div>
 <div class="titulo-amarelo">NOSSOS BRINQUEDOS</div>
-<div class="brinqs"><div class="brinq"><b>Quebra-cabeça 60 peças</b></div><div class="brinq"><b>Memória 32 Cartas</b></div></div>
+<div class="brinqs">
+<div class="brinq">
+<img src="quebracabeca.jpg" alt="Quebra-cabeça" onerror="this.src='quebracabeca.png'; this.onerror=function(){this.src='quebracabeca.jpeg'}">
+<b>Quebra-cabeça 60 peças</b>
+</div>
+<div class="brinq">
+<img src="memoria.jpg" alt="Memória" onerror="this.src='memoria.png'; this.onerror=function(){this.src='memoria.jpeg'}">
+<b>Memória 32 Cartas</b>
+</div>
+</div>
 <div class="center" style="margin-top:20px"><button class="btn btn-grande" onclick="A('patrocinio')">Quer patrocinar essa ação? 💛</button></div>
 </div>
 
