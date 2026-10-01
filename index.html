@@ -13,19 +13,19 @@ body{background:#061023;color:white;min-height:100vh}
 .tab.ativo{background:#FFC91F;color:#0a1931}
 .sec{display:none;padding:12px 12px 40px 12px}.sec.ativo{display:block}
 .mascote{width:100%;border-radius:20px;display:block;background:#0a1931}
-.frases{text-align:center;font-weight:800;margin:16px 0 12px 0;font-size:19px}
+.frases{text-align:center;font-weight:800;margin:16px 0 12px 0;font-size:19px;line-height:1.3}
 .btn{background:#FFC91F;color:#0a1931;border:none;padding:12px 28px;border-radius:28px;font-weight:800;font-size:15px;cursor:pointer;margin:4px}
 .btn-outline{background:transparent;color:#FFC91F;border:2px solid #FFC91F}
 .btn-grande{width:95%;padding:16px;font-size:17px}
 .center{text-align:center;margin-bottom:18px}
-.card{background:white;color:#0a1931;border-radius:20px;padding:18px;margin-top:12px}
-.banner-escola{width:100%;border-radius:20px;margin-bottom:12px;background:#0a1931}
+.card{background:white;color:#0a1931;border-radius:20px;padding:18px;margin-top:12px;line-height:1.55}
+.banner-escola{width:100%;border-radius:20px;display:block;margin-bottom:12px;background:#0a1931}
 .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}
 .stat{background:#0a1931;border:2px solid #FFC91F;border-radius:16px;padding:14px 6px;text-align:center}
 .stat b{color:#FFC91F;font-size:20px;display:block}.stat span{font-size:12px;color:#fff}
 .brinqs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-.brinq{background:white;border-radius:16px;padding:8px;text-align:center;color:#0a1931}
-.brinq img{width:100%;border-radius:10px;height:110px;object-fit:cover}
+.brinq{background:white;border-radius:16px;padding:8px;text-align:center;color:#0a1931;overflow:hidden}
+.brinq img{width:100%;border-radius:10px;display:block;height:110px;object-fit:cover;background:#f0f0f0}
 .brinq b{display:block;background:#FFC91F;border-radius:20px;padding:8px;font-size:12px;margin-top:8px}
 .titulo-amarelo{text-align:center;color:#FFC91F;font-weight:800;margin:18px 0 10px 0;font-size:18px}
 .estrutura-box{background:#0a1931;border-radius:22px;padding:12px;border:1px solid rgba(255,201,31,0.25)}
@@ -34,17 +34,17 @@ body{background:#061023;color:white;min-height:100vh}
 .est-txt b{color:#FFC91F;font-size:17px;display:block}.est-txt span{font-size:13px;color:#d0d8e8}
 .est-icon{margin-left:auto;font-size:26px}
 .est-footer{background:#FFC91F;color:#0a1931;text-align:center;font-weight:800;padding:12px;border-radius:14px;margin-top:10px;font-size:12px}
-.est-aviso{background:#FFC91F;color:#0a1931;text-align:center;font-weight:700;padding:14px;border-radius:14px;margin-top:14px;font-size:14px}
+.est-aviso{background:#FFC91F;color:#0a1931;text-align:center;font-weight:700;padding:14px;border-radius:14px;margin-top:14px;font-size:14px;line-height:1.3}
 .id-box{background:#0a1931;border-radius:22px;padding:14px;border:1px solid rgba(255,201,31,0.25)}
 .id-titulo{color:#FFC91F;font-weight:900;font-size:20px;text-align:center;margin:8px 0 14px 0}
-.id-card{background:white;color:#0a1931;border-radius:16px;padding:14px;margin-bottom:12px}
+.id-card{background:white;color:#0a1931;border-radius:16px;padding:14px;margin-bottom:12px;line-height:1.4}
 .id-cores{display:flex;gap:10px;margin-top:10px}
 .cor{flex:1;border-radius:12px;padding:12px;text-align:center;font-weight:800;font-size:12px}
 .cor-azul{background:#0a1931;color:white}.cor-amarelo{background:#FFC91F;color:#0a1931}
 .pat-box{background:#0a1931;border-radius:22px;padding:14px;border:1px solid rgba(255,201,31,0.25)}
 .pat-titulo{color:#FFC91F;font-weight:900;font-size:22px;text-align:center;margin:8px 0 4px 0}
 .pat-sub{text-align:center;font-size:13px;color:#d0d8e8;margin-bottom:14px}
-.pat-card{background:white;color:#0a1931;border-radius:16px;padding:14px;margin-bottom:12px}
+.pat-card{background:white;color:#0a1931;border-radius:16px;padding:14px;margin-bottom:12px;line-height:1.4}
 .pat-beneficios{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:12px 0}
 .pat-ben{background:#0f2040;border:1.5px solid #FFC91F;border-radius:14px;padding:10px 4px;text-align:center}
 .pat-ben b{color:#FFC91F;display:block;font-size:11px;margin-top:4px}.pat-ben span{font-size:22px}
@@ -87,52 +87,71 @@ body{background:#061023;color:white;min-height:100vh}
 <img class="mascote" src="conceito.jpg">
 <div class="frases">Mergulhando em ideias,<br>emergindo soluções</div>
 <div class="center"><button class="btn" onclick="A('estrutura')">Conheça o Projeto</button><button class="btn btn-outline" onclick="A('escolas')">NAPYMI nas Escolas</button></div>
-<div class="card"><h3>CONCEITO</h3><p><b>ROV • UFRJ - Ilha do Fundão</b><br>Equipe de robótica submarina da UFRJ.</p></div>
+<div class="card"><h3>CONCEITO</h3><p><b>ROV • Submarine Robotics Team — UFRJ</b><br>Ilha do Fundão, Rio de Janeiro</p><br><p>Somos a equipe de robótica submarina da UFRJ, dedicada a projetar, construir e programar ROVs de alta performance.</p></div>
 </div>
 
 <div id="estrutura" class="sec">
 <div class="estrutura-box">
-<div class="est-item"><div class="est-num">1</div><div class="est-txt"><b>Coordenação Geral</b><span>2 pessoas</span></div><div class="est-icon">⭐</div></div>
-<div class="est-item"><div class="est-num">2</div><div class="est-txt"><b>Mecânica</b><span>2 pessoas</span></div><div class="est-icon">⚙️</div></div>
-<div class="est-item"><div class="est-num">3</div><div class="est-txt"><b>Elétrica</b><span>2 pessoas</span></div><div class="est-icon">🔌</div></div>
-<div class="est-item"><div class="est-num">4</div><div class="est-txt"><b>Software</b><span>2 pessoas</span></div><div class="est-icon">{ }</div></div>
-<div class="est-item"><div class="est-num">5</div><div class="est-txt"><b>Marketing e Projetos Sociais</b><span>2 pessoas</span></div><div class="est-icon">📢</div></div>
+<div class="est-item"><div class="est-num">1</div><div class="est-txt"><b>Coordenação Geral</b><span>2 pessoas<br>👥 2 membros</span></div><div class="est-icon">⭐</div></div>
+<div class="est-item"><div class="est-num">2</div><div class="est-txt"><b>Mecânica</b><span>2 pessoas<br>👥 2 membros</span></div><div class="est-icon">⚙️</div></div>
+<div class="est-item"><div class="est-num">3</div><div class="est-txt"><b>Elétrica</b><span>2 pessoas<br>👥 2 membros</span></div><div class="est-icon">🔌</div></div>
+<div class="est-item"><div class="est-num">4</div><div class="est-txt"><b>Software</b><span>2 pessoas<br>👥 2 membros</span></div><div class="est-icon">{ }</div></div>
+<div class="est-item"><div class="est-num">5</div><div class="est-txt"><b style="font-size:13px">Marketing e Projetos Sociais</b><span>2 pessoas - NAPYMI nas Escolas<br>👥 2 membros</span></div><div class="est-icon">📢</div></div>
 <div class="est-footer">UFRJ • Robótica Submarina • Inovação e Educação</div>
 </div>
-<div class="est-aviso">🚀 Em breve processo seletivo! @napymi.ufrj</div>
+<div class="est-aviso">🚀 Em breve vamos abrir um processo seletivo para novos membros! Fique ligado no nosso Instagram @napymi.ufrj</div>
 </div>
 
-<div id="identidade" class="sec"><div class="id-box"><div class="id-titulo">IDENTIDADE VISUAL</div><div class="id-card"><b>💙 NAPYMI</b><br>Mascote robô submarino amigável.</div><div class="id-card"><b>🎨 Paleta</b><div class="id-cores"><div class="cor cor-azul">AZUL #0A1931</div><div class="cor cor-amarelo">AMARELO #FFC91F</div></div></div></div></div>
+<div id="identidade" class="sec">
+<div class="id-box">
+<div class="id-titulo">IDENTIDADE VISUAL</div>
+<div class="id-card"><b>💙 NAPYMI - ROV Team UFRJ</b><br>Nome inspirado em curiosidade e inovação. Mascote robô submarino amigável que representa a criatividade dos estudantes de engenharia da UFRJ.</div>
+<div class="id-card"><b>🎨 Paleta de Cores</b><div class="id-cores"><div class="cor cor-azul">AZUL OCEANO<br>#0A1931</div><div class="cor cor-amarelo">AMARELO ENERGIA<br>#FFC91F</div></div></div>
+<div class="id-card"><b>🤖 Mascote ÑAPYMI</b><br>- Olhos grandes: curiosidade e atenção<br>- Sorriso: espírito de equipe acolhedor<br>- Corpo azul: tecnologia e oceano<br>- Detalhes amarelos: energia e inovação<br>- Nome: ÑAPYMI remete à exploração submarina</div>
+<div class="id-card"><b>✒️ Tipografia e Estilo</b><br>- Títulos: Bold e arredondado, jovem<br>- Textos: Simples e legível<br>- Tom de voz: Jovem, divertido e educativo<br>- Uso do Ñ: diferencial cultural</div>
+<div style="background:#FFC91F;color:#0a1931;text-align:center;font-weight:800;padding:12px;border-radius:14px;margin-top:6px;font-size:12px">UFRJ • Robótica Submarina • Inovação e Educação</div>
+</div>
+</div>
 
-<div id="patrocinio" class="sec"><div class="pat-box"><div class="pat-titulo">PATROCÍNIO</div><div class="pat-sub">Apoie a robótica e educação!</div><div class="pat-card"><b>💛 Por que patrocinar?</b><div class="pat-beneficios"><div class="pat-ben"><span>🚀</span><b>Visibilidade</b></div><div class="pat-ben"><span>🎓</span><b>Impacto</b></div><div class="pat-ben"><span>💡</span><b>Inovação</b></div></div></div><div class="pat-card"><b>📦 Níveis</b><br><div class="pat-plano"><div><b>🥉 Bronze</b></div><div class="pat-badge">R$500</div></div><div class="pat-plano"><div><b>🥈 Prata</b></div><div class="pat-badge">R$1.5k</div></div><div class="pat-plano"><div><b>🥇 Ouro</b></div><div class="pat-badge">R$3k</div></div><div class="pat-plano" style="background:#FFC91F"><div><b>💎 Diamante</b></div><div class="pat-badge" style="background:#0a1931">R$5k+</div></div></div></div></div>
+<div id="patrocinio" class="sec">
+<div class="pat-box">
+<div class="pat-titulo">PATROCÍNIO</div>
+<div class="pat-sub">Apoie a robótica submarina e a educação em escolas públicas!</div>
+<div class="pat-card"><b>💛 Por que patrocinar?</b><div class="pat-beneficios"><div class="pat-ben"><span>🚀</span><b>Visibilidade</b></div><div class="pat-ben"><span>🎓</span><b>Impacto Social</b></div><div class="pat-ben"><span>💡</span><b>Inovação</b></div></div>Marca presente em competições nacionais e no projeto NAPYMI nas Escolas com 100+ alunos.</div>
+<div class="pat-card"><b>📦 Níveis de Patrocínio</b><br><br><div class="pat-plano"><div><b>🥉 Bronze</b><br><span>Logo no site e redes</span></div><div class="pat-badge">R$500</div></div><div class="pat-plano"><div><b>🥈 Prata</b><br><span>+ logo no ROV</span></div><div class="pat-badge">R$1.500</div></div><div class="pat-plano"><div><b>🥇 Ouro</b><br><span>+ posts dedicados</span></div><div class="pat-badge">R$3.000</div></div><div class="pat-plano" style="border:2px solid #0a1931;background:#FFC91F"><div><b>💎 Diamante</b><br><span>Tudo + palestra na empresa</span></div><div class="pat-badge" style="background:#0a1931">R$5k+</div></div></div>
+<div class="pat-card" style="text-align:center;background:#0a1931;color:white;border:2px solid #FFC91F"><b style="color:#FFC91F">Vamos conversar? 🤝</b><br><span style="font-size:13px">contato@napymi.ufrj.br<br>@napymi.ufrj</span><br><button class="btn" style="margin-top:10px;width:90%" onclick="window.open('mailto:contato@napymi.ufrj.br')">Quero Patrocinar 💛</button></div>
+</div>
+</div>
 
 <div id="escolas" class="sec">
 <img class="banner-escola" src="escolas.jpg">
-<div class="card" style="margin-top:0"><h3 style="text-align:center">Nas Escolas</h3><div class="stats"><div class="stat"><b>100+</b><span>alunos</span></div><div class="stat"><b>5+</b><span>escolas</span></div><div class="stat"><b>10+</b><span>voluntários</span></div></div><p>🤖 Palestras<br>🌊 Oficinas<br>📦 Brinquedos</p></div>
+<div class="card" style="margin-top:0"><h3 style="text-align:center">Nas Escolas</h3><div class="stats"><div class="stat"><b>100+</b><span>alunos</span></div><div class="stat"><b>5+</b><span>escolas</span></div><div class="stat"><b>10+</b><span>voluntários</span></div></div><p>🤖 Palestras de Robótica<br>🌊 Oficinas Vida Marinha<br>📦 Brinquedos Educativos</p></div>
 <div class="titulo-amarelo">NOSSOS BRINQUEDOS</div>
-<div class="brinqs"><div class="brinq"><img src="quebracabeca.jpg"><b>Quebra-cabeça 60 peças</b></div><div class="brinq"><img src="memoria.jpg"><b>Memória 32 Cartas</b></div></div>
+<div class="brinqs">
+<div class="brinq"><img src="quebracabeca.jpg" onerror="this.src='quebracabeca.png'"><b>Quebra-cabeça 60 peças</b></div>
+<div class="brinq"><img src="memoria.jpg" onerror="this.src='memoria.png'"><b>Memória 32 Cartas</b></div>
+</div>
 <div class="center" style="margin-top:20px"><button class="btn btn-grande" onclick="A('patrocinio')">Quer patrocinar essa ação? 💛</button></div>
 </div>
 
 <div id="loja" class="sec">
 <div class="loja-box">
 <div class="loja-titulo">LOJA NAPYMI 💙💛</div>
-<div class="loja-sub">Todo valor vai para o projeto nas escolas!</div>
+<div class="loja-sub">Todo valor arrecadado vai para o projeto nas escolas!</div>
 <div class="loja-grid">
-<div class="loja-prod"><img src="chaveiro.jpg"><b>Chaveiro NAPYMI</b><div class="loja-preco">R$ 15,90</div><button class="loja-btn" onclick="addCart('Chaveiro NAPYMI',15.90)">Adicionar 🛒</button></div>
-<div class="loja-prod"><img src="bone.jpg"><b>Boné NAPYMI</b><div class="loja-preco">R$ 60,00</div><button class="loja-btn" onclick="addCart('Boné NAPYMI',60)">Adicionar 🛒</button></div>
-<div class="loja-prod"><img src="camisa.jpg"><b>Camisa NAPYMI</b><div class="loja-preco">R$ 55,00</div><button class="loja-btn" onclick="addCart('Camisa NAPYMI',55)">Adicionar 🛒</button></div>
+<div class="loja-prod"><img src="chaveiro.jpg" onerror="this.src='chaveiro.png'"><b>Chaveiro NAPYMI</b><div class="loja-preco">R$ 15,90</div><button class="loja-btn" onclick="addCart('Chaveiro NAPYMI',15.90)">Adicionar 🛒</button></div>
+<div class="loja-prod"><img src="bone.jpg" onerror="this.src='bone.png'"><b>Boné NAPYMI</b><div class="loja-preco">R$ 60,00</div><button class="loja-btn" onclick="addCart('Boné NAPYMI',60)">Adicionar 🛒</button></div>
+<div class="loja-prod"><img src="blusa.jpg" onerror="this.src='blusa.png'; this.onerror=function(){this.src='camisa.jpg'}"><b>Blusa NAPYMI</b><div class="loja-preco">R$ 55,00</div><button class="loja-btn" onclick="addCart('Blusa NAPYMI',55)">Adicionar 🛒</button></div>
 </div>
-
 <div class="carrinho" id="carrinho-box">
 <h4>🛒 Seu Carrinho <span id="carrinho-vazio" style="font-weight:400;font-size:12px;color:#888">(vazio)</span></h4>
 <div id="lista-carrinho"></div>
-<div style="margin-top:12px;border-top:1px dashed #ccc;padding-top:10px"><b style="font-size:13px">📦 Calcular Frete</b><div class="input-cep"><input id="cep" type="text" placeholder="CEP ex: 21941-000" maxlength="9"><button onclick="calcFrete()">Calcular</button></div><div id="frete-result" style="font-size:12px;margin-top:6px"></div></div>
+<div style="margin-top:12px;border-top:1px dashed #ccc;padding-top:10px"><b style="font-size:13px">📦 Calcular Frete</b><div class="input-cep"><input id="cep" type="text" placeholder="Digite seu CEP ex: 21941-000" maxlength="9"><button onclick="calcFrete()">Calcular</button></div><div id="frete-result" style="font-size:12px;margin-top:6px;color:#0a1931"></div></div>
 <div class="total" id="total-geral">Total: R$ 0,00</div>
-<div style="margin-top:10px"><b style="font-size:13px">💳 Formas de Pagamento</b><div class="pagamentos"><div class="pag">💛 PIX<br><span style="font-weight:400">5% OFF</span></div><div class="pag">💳 Cartão<br><span style="font-weight:400">até 3x</span></div><div class="pag">🧾 Boleto<br><span style="font-weight:400">à vista</span></div></div><p style="font-size:11px;color:#666;margin-top:8px;text-align:center">Pagamento combinado via WhatsApp</p></div>
+<div style="margin-top:10px"><b style="font-size:13px">💳 Formas de Pagamento</b><div class="pagamentos"><div class="pag">💛 PIX<br><span style="font-weight:400">5% OFF</span></div><div class="pag">💳 Cartão<br><span style="font-weight:400">até 3x</span></div><div class="pag">🧾 Boleto<br><span style="font-weight:400">à vista</span></div></div><p style="font-size:11px;color:#666;margin-top:8px;text-align:center">Pagamento combinado via WhatsApp após finalizar</p></div>
 <button class="btn btn-grande" style="width:100%;margin-top:14px;background:#25D366;color:white" onclick="finalizarWhats()">Finalizar no WhatsApp 💬</button>
 </div>
-<div style="background:#FFC91F;color:#0a1931;text-align:center;font-weight:800;padding:12px;border-radius:14px;margin-top:12px;font-size:12px">UFRJ • 100% do lucro para educação</div>
+<div style="background:#FFC91F;color:#0a1931;text-align:center;font-weight:800;padding:12px;border-radius:14px;margin-top:12px;font-size:12px">UFRJ • 100% do lucro para educação 💙</div>
 </div>
 </div>
 
@@ -156,9 +175,8 @@ function renderCart(){
   let vazio=document.getElementById('carrinho-vazio');
   let count=document.getElementById('cart-count');
   lista.innerHTML=''; let subtotal=0;
-  if(cart.length===0){
-    vazio.style.display='inline'; count.style.display='none';
-  } else {
+  if(cart.length===0){ vazio.style.display='inline'; count.style.display='none'; }
+  else {
     vazio.style.display='none'; count.style.display='inline'; count.textContent=cart.reduce((s,p)=>s+p.qtd,0);
     cart.forEach((p,i)=>{
       subtotal+=p.preco*p.qtd;
@@ -171,13 +189,13 @@ function renderCart(){
 function calcFrete(){
   let cep=document.getElementById('cep').value.replace(/\D/g,'');
   let result=document.getElementById('frete-result');
-  if(cep.length<8){ result.innerHTML='⚠️ CEP inválido'; return; }
+  if(cep.length<8){ result.innerHTML='⚠️ Digite um CEP válido'; return; }
   if(cep.startsWith('2')){ frete=15 } else { frete=25 }
-  result.innerHTML=`✅ Frete: <b>R$ ${frete.toFixed(2).replace('.',',')}</b> | Retirada UFRJ: <b>Grátis</b>`;
+  result.innerHTML=`✅ Frete: <b>R$ ${frete.toFixed(2).replace('.',',')}</b> (PAC 5-8 dias) | Retirada UFRJ: <b>Grátis</b>`;
   renderCart();
 }
 function finalizarWhats(){
-  if(cart.length===0){ alert('Carrinho vazio!'); return; }
+  if(cart.length===0){ alert('Seu carrinho está vazio!'); return; }
   let cep=document.getElementById('cep').value||'Não informado';
   let subtotal=parseFloat(document.getElementById('total-geral').dataset.subtotal||0);
   let total=subtotal+frete;
@@ -189,4 +207,4 @@ function finalizarWhats(){
 }
 </script>
 </body>
-                                                               </html>
+</html>
