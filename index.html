@@ -1,27 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NAPYMI UFRJ</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAPYMI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="topo">
-<img class="logo" src="logo.jpg">
-<div class="menu">
-<button class="ativo" onclick="trocar('loja',this)">Loja</button>
-<button onclick="trocar('escolas',this)">NAPYMI nas Escolas</button>
-<button onclick="trocar('pat',this)">Patrocinio</button>
-<button onclick="trocar('iden',this)">Identidade</button>
-<button onclick="trocar('conc',this)">Conceito</button>
-</div>
-</div>
-<div id="loja" class="pagina ativa"><img src="loja.jpg"></div>
-<div id="escolas" class="pagina"><img src="projeto.jpg"></div>
-<div id="pat" class="pagina"><img src="patrocinio.jpg"></div>
-<div id="iden" class="pagina"><img src="iden.jpg"></div>
-<div id="conc" class="pagina"><img src="conceito.jpg"></div>
+
+<header>
+  <h1>NAPYMI</h1>
+  <nav>
+    <button class="aba" onclick="mostrarAba('conceito')">Conceito</button>
+    <button class="aba" onclick="mostrarAba('identidade')">Identidade</button>
+    <button class="aba" onclick="mostrarAba('patrocinio')">Patrocínio</button>
+    <button class="aba" onclick="mostrarAba('estrutura')">Estrutura</button>
+    <button class="aba" onclick="mostrarAba('loja')">Loja</button>
+  </nav>
+</header>
+
+<main>
+  <section id="conceito" class="conteudo ativo">
+    <h2>Conceito</h2>
+    <p>NAPYMI é uma marca que une moda, identidade e propósito.</p>
+  </section>
+
+  <section id="identidade" class="conteudo">
+    <h2>Identidade Visual</h2>
+    <p>Logo minimalista, cores neutras e atitude.</p>
+    <img src="patrocinio.jpg" alt="Identidade" style="max-width:100%;">
+  </section>
+
+  <section id="patrocinio" class="conteudo">
+    <h2>Patrocínio</h2>
+    <p>Marcas parceiras que acreditam no nosso movimento.</p>
+  </section>
+
+  <section id="estrutura" class="conteudo">
+    <h2>Estrutura</h2>
+    <p>Nosso time, produção e bastidores.</p>
+  </section>
+
+  <section id="loja" class="conteudo">
+    <h2>Loja NAPYMI</h2>
+    
+    <div class="produtos" style="display:flex; gap:20px; flex-wrap:wrap;">
+      <div class="card">
+        <img src="bone.png" alt="Boné" width="150">
+        <h3>Boné NAPYMI</h3>
+        <p>R$ 15,90</p>
+        <button onclick="comprar('Boné NAPYMI - R$15,90')">Adicionar</button>
+      </div>
+      <div class="card">
+        <img src="camisa.png" alt="Camisa" width="150">
+        <h3>Camisa NAPYMI</h3>
+        <p>R$ 15,90</p>
+        <button onclick="comprar('Camisa NAPYMI - R$15,90')">Adicionar</button>
+      </div>
+      <div class="card">
+        <img src="chaveiro.png" alt="Chaveiro" width="150">
+        <h3>Chaveiro NAPYMI</h3>
+        <p>R$ 15,90</p>
+        <button onclick="comprar('Chaveiro NAPYMI - R$15,90')">Adicionar</button>
+      </div>
+    </div>
+
+    <!-- CHECKOUT COM CADASTRO E FRETE -->
+    <div id="checkout" style="margin-top:40px; padding:20px; border:1px solid #ccc; border-radius:12px; background:#f9f9f9;">
+      <h3>Finalizar compra</h3>
+      <p id="produto-escolhido" style="font-weight:bold;">Nenhum produto selecionado</p>
+      
+      <input id="nome" placeholder="Seu nome completo" style="width:100%; margin:8px 0; padding:10px;">
+      <input id="cep" placeholder="Seu CEP - ex: 20000-000" style="width:100%; margin:8px 0; padding:10px;">
+      <button onclick="calcularFrete()" style="cursor:pointer; padding:10px; width:100%;">Calcular Frete</button>
+      
+      <p id="endereco"></p>
+      <p id="frete"></p>
+      <p id="total" style="font-weight:bold; font-size:18px;"></p>
+      
+      <button onclick="finalizarCompra()" style="cursor:pointer; background:black; color:white; padding:12px; width:100%; border-radius:8px; margin-top:10px;">Cadastrar e Comprar no WhatsApp</button>
+    </div>
+
+  </section>
+</main>
+
 <script src="script.js"></script>
 </body>
 </html>
