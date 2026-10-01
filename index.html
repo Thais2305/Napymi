@@ -3,72 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAPYMI</title>
+  <title>NAPYMI - ROV Submarine Team UFRJ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header style="text-align:center; background:#0a1931; padding:15px;">
-  <img src="logo.jpg" alt="Logo NAPYMI" style="max-width:180px;">
-  <nav style="margin-top:15px;">
+<header>
+  <img src="logo.jpg" alt="NAPYMI" class="logo">
+  <nav>
     <button class="aba" onclick="mostrarAba('conceito')">Conceito</button>
     <button class="aba" onclick="mostrarAba('identidade')">Identidade</button>
     <button class="aba" onclick="mostrarAba('patrocinio')">Patrocínio</button>
     <button class="aba" onclick="mostrarAba('estrutura')">Estrutura</button>
+    <button class="aba" onclick="mostrarAba('escolas')">ÑAPYMI nas Escolas</button>
     <button class="aba" onclick="mostrarAba('loja')">Loja</button>
   </nav>
 </header>
 
 <main>
   <section id="conceito" class="conteudo ativo">
-    <img src="conceito.jpg" style="width:100%; border-radius:12px; max-width:350px; display:block; margin:0 auto;">
+    <div class="banner-conceito">
+      <img src="conceito.jpg" alt="Mascote NAPYMI">
+      <h2>Mergulhando em ideias, emergindo soluções</h2>
+      <button class="btn-amarelo" onclick="mostrarAba('escolas')">Conheça nosso Projeto Social</button>
+    </div>
     <h2>CONCEITO</h2>
     <p><b>ROV • Submarine Robotics Team — UFRJ</b><br>Ilha do Fundão, Rio de Janeiro</p>
-    <p>Somos a equipe de robótica submarina da UFRJ, dedicada a projetar e construir ROVs de alta performance.</p>
-    <img src="projeto.jpg" style="width:100%; border-radius:12px; margin-top:10px;">
+    <p>Somos a equipe de robótica submarina da UFRJ, dedicada a projetar e construir ROVs de alta performance para competições e levar ciência para escolas públicas.</p>
+    <img src="projeto.jpg" class="img-full">
   </section>
 
   <section id="identidade" class="conteudo">
-    <h2>Identidade</h2>
-    <img src="iden.jpg" style="width:100%; border-radius:12px;">
+    <h2>Identidade Visual</h2>
+    <p>Paleta oficial: Azul Marinho #0a1931 e Amarelo #ffcc00. Mascote caranguejo azul com snorkel.</p>
+    <img src="iden.jpg" class="img-full">
   </section>
 
   <section id="patrocinio" class="conteudo">
     <h2>Patrocínio</h2>
-    <img src="patrocinio.jpg" style="width:100%; border-radius:12px;">
+    <p>Seja parceiro da NAPYMI!</p>
+    <img src="patrocinio.jpg" class="img-full">
   </section>
 
   <section id="estrutura" class="conteudo">
-    <h2>Estrutura</h2>
-    <p>Nossa equipe e estrutura de projetos.</p>
-    <img src="loja.jpg" style="width:100%; border-radius:12px;">
+    <h2>Estrutura - Nossa Equipe</h2>
+    <p>Somos <b>10 membros</b> divididos em 5 áreas estratégicas.</p>
+    <img src="estrutura.jpg" class="img-full">
+    <div class="aviso-processo">
+      🚀 Em breve vamos abrir um processo seletivo para novos membros! Fique ligado no nosso Instagram @napymi.ufrj
+    </div>
+  </section>
+
+  <section id="escolas" class="conteudo">
+    <h2>ÑAPYMI nas Escolas - Projeto Social</h2>
+    <p><b>Educação e Sustentabilidade Marinha</b> - Levamos robótica e preservação do oceano para crianças de escolas públicas.</p>
+    <div class="stats">
+      <div class="stat"><b>100+</b><br>crianças alcançadas</div>
+      <div class="stat"><b>10</b><br>membros</div>
+      <div class="stat"><b>2</b><br>escolas públicas</div>
+    </div>
+    <img src="escolas.jpg" class="img-full">
+    <h3>Nossas Atividades</h3>
+    <p>⚙️ Palestras de Robótica | 🐟 Oficinas de Vida Marinha | 🎁 Brinquedos Educativos (Quebra-cabeça 60 peças e Jogo da Memória)</p>
+    <p>🎯 Objetivo: Despertar interesse por STEM e consciência ambiental nas novas gerações.</p>
   </section>
 
   <section id="loja" class="conteudo">
-    <h2>Loja NAPYMI</h2>
+    <h2>Nossa Loja</h2>
     <div class="produtos">
       <div class="card">
-        <img src="bone.jpg" width="150"><h3>Boné NAPYMI</h3><p>R$ 15,90</p>
-        <button onclick="comprar('Boné NAPYMI - R$15,90')">Adicionar</button>
+        <img src="bone.jpg" alt="Boné"><h3>Boné Trucker NAPYMI</h3><p>Boné azul marinho com bordado amarelo</p><p class="preco">R$ 50,00</p>
+        <button onclick="comprar('Boné Trucker NAPYMI - R$50,00', 50)">Adicionar</button>
       </div>
       <div class="card">
-        <img src="blusa.jpg" width="150"><h3>Blusa NAPYMI</h3><p>R$ 15,90</p>
-        <button onclick="comprar('Blusa NAPYMI - R$15,90')">Adicionar</button>
+        <img src="blusa.jpg" alt="Blusa"><h3>Camiseta NAPYMI</h3><p>Camiseta 100% algodão estampa submarina</p><p class="preco">R$ 45,00</p>
+        <button onclick="comprar('Camiseta NAPYMI - R$45,00', 45)">Adicionar</button>
       </div>
       <div class="card">
-        <img src="chaveiro.jpg" width="150"><h3>Chaveiro NAPYMI</h3><p>R$ 15,90</p>
-        <button onclick="comprar('Chaveiro NAPYMI - R$15,90')">Adicionar</button>
+        <img src="chaveiro.jpg" alt="Chaveiro"><h3>Chaveiro Crab NAPYMI</h3><p>Chaveiro acrílico colecionável</p><p class="preco">R$ 15,00</p>
+        <button onclick="comprar('Chaveiro Crab NAPYMI - R$15,00', 15)">Adicionar</button>
       </div>
     </div>
 
-    <div id="checkout" style="margin-top:30px; padding:15px; border:1px solid #ccc; border-radius:12px; background:#f9f9f9;">
-      <h3>Finalizar compra</h3>
-      <p id="produto-escolhido"><b>Nenhum produto selecionado</b></p>
-      <input id="nome" placeholder="Seu nome" style="width:100%; padding:10px; margin:5px 0;">
-      <input id="cep" placeholder="Seu CEP" style="width:100%; padding:10px; margin:5px 0;">
-      <button onclick="calcularFrete()" style="width:100%; padding:10px;">Calcular Frete</button>
-      <p id="endereco"></p><p id="frete"></p><p id="total" style="font-weight:bold;"></p>
-      <button onclick="finalizarCompra()" style="width:100%; padding:12px; background:black; color:white; border-radius:8px; margin-top:10px;">Cadastrar e Comprar no WhatsApp</button>
+    <div id="checkout">
+      <h3>🛒 Meu Carrinho</h3>
+      <p id="produto-escolhido"><b>Carrinho vazio - adicione produtos acima</b></p>
+      <input id="nome" placeholder="Seu nome completo">
+      <input id="cep" placeholder="Seu CEP">
+      <button class="btn-cinza" onclick="calcularFrete()">Calcular Frete</button>
+      <p id="endereco"></p><p id="frete"></p><p id="total" style="font-size:18px; color:#0a1931;"></p>
+      <button class="btn-preto" onclick="finalizarCompra()">Finalizar no WhatsApp</button>
+      <button onclick="carrinho=[]; freteValor=0; atualizarCarrinho(); document.getElementById('endereco').innerText=''; document.getElementById('frete').innerText='';" style="width:100%; margin-top:8px; background:transparent; border:1px solid #ccc; padding:8px; border-radius:8px; cursor:pointer;">Limpar Carrinho</button>
     </div>
   </section>
 </main>
