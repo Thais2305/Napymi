@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NAPYMI</title>
+<title>NAPYMI - ROV Team UFRJ</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
 body{background:#061023;color:white;min-height:100vh}
 .top{text-align:center;padding:14px 0 6px 0}.top img{width:140px;border-radius:12px}
-.tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;white-space:nowrap}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;white-space:nowrap;scrollbar-width:none}
 .tab{border:none;padding:10px 16px;border-radius:22px;font-weight:700;background:rgba(255,255,255,0.14);color:white;cursor:pointer;flex-shrink:0}
 .tab.ativo{background:#FFC91F;color:#0a1931}
 .sec{display:none;padding:12px 12px 40px 12px}.sec.ativo{display:block}
@@ -19,14 +19,7 @@ body{background:#061023;color:white;min-height:100vh}
 .btn-grande{width:95%;padding:16px;font-size:17px}
 .center{text-align:center;margin-bottom:18px}
 .card{background:white;color:#0a1931;border-radius:20px;padding:18px;margin-top:12px}
-.estrutura-box{background:#0a1931;border-radius:22px;padding:12px;border:1px solid rgba(255,201,31,0.25)}
-.est-item{background:#0f2040;border:1.5px solid #FFC91F;border-radius:16px;display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:10px}
-.est-num{background:#FFC91F;color:#0a1931;min-width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900}
-.est-txt b{color:#FFC91F;font-size:17px;display:block}.est-txt span{font-size:13px;color:#d0d8e8}
-.est-icon{margin-left:auto;font-size:26px}
-.est-footer{background:#FFC91F;color:#0a1931;text-align:center;font-weight:800;padding:12px;border-radius:14px;margin-top:10px;font-size:12px}
-.est-aviso{background:#FFC91F;color:#0a1931;text-align:center;font-weight:700;padding:14px;border-radius:14px;margin-top:14px;font-size:14px}
-.banner-escola{width:100%;border-radius:20px;margin-bottom:12px}
+.banner-escola{width:100%;border-radius:20px;margin-bottom:12px;background:#0a1931}
 .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}
 .stat{background:#0a1931;border:2px solid #FFC91F;border-radius:16px;padding:14px 6px;text-align:center}
 .stat b{color:#FFC91F;font-size:20px;display:block}.stat span{font-size:12px;color:#fff}
@@ -34,10 +27,23 @@ body{background:#061023;color:white;min-height:100vh}
 .brinq{background:white;border-radius:16px;padding:10px;text-align:center;color:#0a1931}
 .brinq b{display:block;background:#FFC91F;border-radius:20px;padding:8px;font-size:12px;margin-top:6px}
 .titulo-amarelo{text-align:center;color:#FFC91F;font-weight:800;margin:18px 0 10px 0;font-size:18px}
+.estrutura-box{background:#0a1931;border-radius:22px;padding:12px;border:1px solid rgba(255,201,31,0.25)}
+.est-item{background:#0f2040;border:1.5px solid #FFC91F;border-radius:16px;display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:10px}
+.est-num{background:#FFC91F;color:#0a1931;min-width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900}
+.est-txt b{color:#FFC91F;font-size:17px;display:block}.est-txt span{font-size:13px;color:#d0d8e8}
+.est-icon{margin-left:auto;font-size:26px}
+.est-footer{background:#FFC91F;color:#0a1931;text-align:center;font-weight:800;padding:12px;border-radius:14px;margin-top:10px;font-size:12px}
+.est-aviso{background:#FFC91F;color:#0a1931;text-align:center;font-weight:700;padding:14px;border-radius:14px;margin-top:14px;font-size:14px}
+.id-box{background:#0a1931;border-radius:22px;padding:14px;border:1px solid rgba(255,201,31,0.25)}
+.id-titulo{color:#FFC91F;font-weight:900;font-size:20px;text-align:center;margin:8px 0 14px 0}
+.id-card{background:white;color:#0a1931;border-radius:16px;padding:14px;margin-bottom:12px;line-height:1.4}
+.id-cores{display:flex;gap:10px;margin-top:10px}
+.cor{flex:1;border-radius:12px;padding:12px;text-align:center;font-weight:800;font-size:12px}
+.cor-azul{background:#0a1931;color:white}.cor-amarelo{background:#FFC91F;color:#0a1931}
 </style>
 </head>
 <body>
-<div class="top"><img src="logo.jpg" alt="NAPYMI"></div>
+<div class="top"><img src="logo.jpg" alt="NAPYMI" onerror="this.style.display='none'"></div>
 <div class="tabs">
 <button id="b-conceito" class="tab ativo" onclick="A('conceito')">Conceito</button>
 <button id="b-estrutura" class="tab" onclick="A('estrutura')">Estrutura</button>
@@ -54,7 +60,7 @@ body{background:#061023;color:white;min-height:100vh}
 <button class="btn" onclick="A('estrutura')">Conheça o Projeto</button>
 <button class="btn btn-outline" onclick="A('escolas')">NAPYMI nas Escolas</button>
 </div>
-<div class="card"><h3>CONCEITO</h3><p><b>ROV • UFRJ</b><br>Ilha do Fundão, Rio de Janeiro</p></div>
+<div class="card"><h3>CONCEITO</h3><p><b>ROV • UFRJ</b><br>Ilha do Fundão, Rio</p><br><p>Equipe de robótica submarina da UFRJ.</p></div>
 </div>
 
 <div id="estrutura" class="sec">
@@ -69,9 +75,17 @@ body{background:#061023;color:white;min-height:100vh}
 <div class="est-aviso">🚀 Em breve vamos abrir um processo seletivo para novos membros! Fique ligado no nosso Instagram @napymi.ufrj</div>
 </div>
 
-<div id="identidade" class="sec"><div class="card"><h3>IDENTIDADE</h3><p>Mascote e cores azul e amarelo.</p></div></div>
-<div id="patrocinio" class="sec"><div class="card"><h3>PATROCÍNIO</h3><p>contato@napymi.ufrj.br</p></div></div>
-<div id="loja" class="sec"><div class="card"><h3>LOJA</h3><p>Em breve!</p></div></div>
+<div id="identidade" class="sec">
+<div class="id-box">
+<div class="id-titulo">IDENTIDADE VISUAL</div>
+<div class="id-card"><b>💙 NAPYMI</b><br>Mascote robô submarino amigável que representa curiosidade e engenharia.</div>
+<div class="id-card"><b>🎨 Paleta</b><div class="id-cores"><div class="cor cor-azul">AZUL OCEANO<br>#0A1931</div><div class="cor cor-amarelo">AMARELO ENERGIA<br>#FFC91F</div></div></div>
+<div class="id-card"><b>🤖 Mascote</b><br>- Olhos grandes: curiosidade<br>- Sorriso: espírito de equipe<br>- Azul: oceano e tecnologia<br>- Amarelo: energia</div>
+<div style="background:#FFC91F;color:#0a1931;text-align:center;font-weight:800;padding:12px;border-radius:14px;margin-top:6px;font-size:12px">UFRJ • Robótica Submarina • Inovação e Educação</div>
+</div>
+</div>
+
+<div id="patrocinio" class="sec"><div class="card"><h3>PATROCÍNIO</h3><p>Apoie nosso projeto!<br>📧 contato@napymi.ufrj.br<br>📸 @napymi.ufrj</p></div></div>
 
 <div id="escolas" class="sec">
 <img class="banner-escola" src="escolas.jpg" onerror="this.style.display='none'">
@@ -80,6 +94,8 @@ body{background:#061023;color:white;min-height:100vh}
 <div class="brinqs"><div class="brinq"><b>Quebra-cabeça 60 peças</b></div><div class="brinq"><b>Memória 32 Cartas</b></div></div>
 <div class="center" style="margin-top:20px"><button class="btn btn-grande" onclick="A('patrocinio')">Quer patrocinar essa ação? 💛</button></div>
 </div>
+
+<div id="loja" class="sec"><div class="card"><h3>LOJA</h3><p>Em breve: camisetas e kits! 💛</p></div></div>
 
 <script>
 function A(id){
